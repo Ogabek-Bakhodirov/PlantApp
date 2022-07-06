@@ -79,6 +79,16 @@ class OnboardingViewController: UIViewController {
 
         return view
     }()
+    
+    lazy var nextButton: UIButton = {
+        let view = UIButton()
+        view.translatesAutoresizingMaskIntoConstraints = false
+        view.setTitle("Next", for: .normal)
+        view.backgroundColor = UIColor(named: "ic_next_bttn_color")
+        view.setTitleColor(.white, for: .normal)
+
+        return view
+    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -94,6 +104,7 @@ class OnboardingViewController: UIViewController {
 
     private func setupSubviews() {
         view.addSubview(contentStack)
+        view.addSubview(nextButton)
 
         NSLayoutConstraint.activate([
             mainImageView.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 60.0),
@@ -104,6 +115,11 @@ class OnboardingViewController: UIViewController {
             contentStack.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 20.0),
             contentStack.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -20.0),
 //            contentStack.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.6)
+            
+            nextButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -65.0),
+            nextButton.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 20.0),
+            nextButton.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -20.0),
+            nextButton.heightAnchor.constraint(equalToConstant: 50)
         ])
     }
 }
