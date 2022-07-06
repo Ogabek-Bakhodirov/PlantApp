@@ -1,3 +1,3 @@
 # PlantApp
 
-This is your work Ogabek
+This App helps to choose and find out your favourite plant.
