@@ -12,8 +12,6 @@ enum Page {
     case learPage
     case readPage
 }
-var page = Page.identifyPage
-var pageNumber = 1
 
 class OnboardingViewController: UIViewController {
 
@@ -132,7 +130,11 @@ class OnboardingViewController: UIViewController {
         ])
     }
     
+    private var pageNumber = 1
+    
     @objc func nextButtonTapped(on: UIButton){
+        
+        
         pageNumber += 1
         
         switch pageNumber{
@@ -152,7 +154,9 @@ class OnboardingViewController: UIViewController {
         changeMainPageElements()
     }
     
-    func changeMainPageElements(){
+    private var page = Page.identifyPage
+    
+    private func changeMainPageElements(){
         switch page {
         case .identifyPage:
             print("1")
