@@ -143,7 +143,10 @@ class OnboardingViewController: UIViewController {
         case 3:
             page = Page.readPage
         default:
-            print("Hello world")
+            let signUpViewController = SignUpViewController()
+            signUpViewController.modalTransitionStyle = .crossDissolve
+            signUpViewController.modalPresentationStyle = .fullScreen
+            present(signUpViewController, animated: true)
         }
         
         changeMainPageElements()
