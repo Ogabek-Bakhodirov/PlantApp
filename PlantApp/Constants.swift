@@ -7,7 +7,7 @@
 
 import UIKit
 
-struct K{
+struct Constant{
     
     struct OnboardingImages{
         static var identifyPageImage = UIImage(named: "ic_onboarding_identify")

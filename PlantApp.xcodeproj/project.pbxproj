@@ -13,7 +13,7 @@
 		2CDF1DB72874960B00F0BC12 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2CDF1DB52874960B00F0BC12 /* LaunchScreen.storyboard */; };
 		80AC9F6C28757284006BC246 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80AC9F6B28757284006BC246 /* Constants.swift */; };
 		80AC9F6E2875A53E006BC246 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80AC9F6D2875A53E006BC246 /* SignUpViewController.swift */; };
-		CE8AAF7A2876CC6F0099D325 /* LoginPageViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8AAF792876CC6F0099D325 /* LoginPageViewController2.swift */; };
+		80AC9F9628774687006BC246 /* ContentButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80AC9F9528774687006BC246 /* ContentButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,7 +25,7 @@
 		2CDF1DB82874960B00F0BC12 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		80AC9F6B28757284006BC246 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		80AC9F6D2875A53E006BC246 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
-		CE8AAF792876CC6F0099D325 /* LoginPageViewController2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPageViewController2.swift; sourceTree = "<group>"; };
+		80AC9F9528774687006BC246 /* ContentButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +66,7 @@
 				2CDF1DB52874960B00F0BC12 /* LaunchScreen.storyboard */,
 				2CDF1DB82874960B00F0BC12 /* Info.plist */,
 				80AC9F6B28757284006BC246 /* Constants.swift */,
+				80AC9F9528774687006BC246 /* ContentButton.swift */,
 			);
 			path = PlantApp;
 			sourceTree = "<group>";
@@ -142,7 +143,7 @@
 			files = (
 				2C1A86E228749AF4009600F9 /* OnboardingViewController.swift in Sources */,
 				2CDF1DAB2874960900F0BC12 /* AppDelegate.swift in Sources */,
-				CE8AAF7A2876CC6F0099D325 /* LoginPageViewController2.swift in Sources */,
+				80AC9F9628774687006BC246 /* ContentButton.swift in Sources */,
 				80AC9F6E2875A53E006BC246 /* SignUpViewController.swift in Sources */,
 				80AC9F6C28757284006BC246 /* Constants.swift in Sources */,
 			);
