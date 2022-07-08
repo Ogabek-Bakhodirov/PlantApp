@@ -7,7 +7,7 @@
 
 import UIKit
 
-struct OnboardingImages{
+struct Images{
     static var identifyPageImage = UIImage(named: "ic_onboarding_identify")
     static var learnPageImage = UIImage(named: "ic_onboarding_learn")
     static var readPageImage = UIImage(named: "ic_onboarding_read")
