@@ -12,7 +12,7 @@ class SpeciesViewController: UIViewController{
     lazy var backgroundTopImage: UIImageView = {
         let view = UIImageView()
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.image = UIImage(named: "")
+        view.image = Images.speciesPage_bg_img
         
         return view
     }()
@@ -21,5 +21,17 @@ class SpeciesViewController: UIViewController{
         super.viewDidLoad()
         
         view.backgroundColor = .systemGray6
+        
+        setupSubviews()
+    }
+    
+    func setupSubviews(){
+        view.addSubview(backgroundTopImage)
+        
+        NSLayoutConstraint.activate([
+            backgroundTopImage.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
+            backgroundTopImage.leftAnchor.constraint(equalTo: view.leftAnchor),
+            backgroundTopImage.rightAnchor.constraint(equalTo: view.rightAnchor),
+        ])
     }
 }

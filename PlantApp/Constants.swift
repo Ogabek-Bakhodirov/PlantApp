@@ -14,6 +14,7 @@ struct Images{
     static var identifyPageDot = UIImage(named: "ic_dots_1")
     static var learnPageDot = UIImage(named: "ic_dots_2")
     static var readPageDot = UIImage(named: "ic_dots_3")
+    static var speciesPage_bg_img = UIImage(named: "speciesPage_bg_img")
 }
 
 struct Colors{
