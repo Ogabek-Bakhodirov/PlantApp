@@ -9,10 +9,9 @@ import UIKit
 
 class SpeciesViewController: UIViewController{
     
-    let alphabet = ["#", "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y"]
+    let alphabet = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y"]
     
     let plantName = ["C", "CACTUS", "CISTUS", "CAESALPENIA", "CINNAMOUM", "CIRSIUM", "CISSUS"]
-    
     
     lazy var backgroundTopImage: UIImageView = {
         let view = UIImageView()
@@ -67,7 +66,7 @@ class SpeciesViewController: UIViewController{
         view.translatesAutoresizingMaskIntoConstraints = false
         view.delegate = self
         view.dataSource = self
-        view.register(SpeciesTableViewCell.self, forCellReuseIdentifier: "SpeciesTableViewCell")
+        view.register(SpeciesTableViewCell.self, forCellReuseIdentifier: SpeciesTableViewCell.identifier)
         view.separatorStyle = .none
         view.backgroundColor = .systemGray6
         
@@ -125,7 +124,6 @@ class SpeciesViewController: UIViewController{
 extension SpeciesViewController: UITableViewDelegate, UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("A")
         let listPlantViewController = ListPlantViewController()
         listPlantViewController.modalTransitionStyle = .crossDissolve
         listPlantViewController.modalPresentationStyle = .fullScreen
@@ -148,13 +146,25 @@ extension SpeciesViewController: UITableViewDelegate, UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "SpeciesTableViewCell") as? SpeciesTableViewCell else { return UITableViewCell() } 
-        
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: SpeciesTableViewCell.identifier) as? SpeciesTableViewCell else { return UITableViewCell() }
         cell.selectionStyle = .none
-        cell.speciesButton.setTitle(plantName[indexPath.row], for: .normal)
-        cell.speciesButton.setTitleColor(indexPath.row == 0 ? Colors.onboardingBtnColor : Colors.spaciesPagetextColor, for: .normal)
-        
+        cell.speciesLabel.text = alphabet[indexPath.section] + plantName[indexPath.row]
+
         return cell
+    }
+
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return alphabet[section]
+    }
+
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let label = UILabel()
+        label.font = .systemFont(ofSize: 30.0, weight: .bold)
+        label.textColor = Colors.onboardingBtnColor
+        label.text = alphabet[section]
+        label.textAlignment = .left
+
+        return label
     }
 }
 
