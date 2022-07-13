@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import TextFieldEffects
 
 class FirstScreenViewController: UINavigationController{
     
@@ -45,14 +44,14 @@ class FirstScreenViewController: UINavigationController{
         return view
     }()
     
-    lazy var usernameTextfield: IsaoTextField = {
-        let view = IsaoTextField()
-        view.inactiveColor = UIColor.gray
-        view.activeColor = UIColor(named: "ic_color")
+    lazy var usernameTextfield: UITextField = {
+        let view = UITextField()
+//        view.inactiveColor = UIColor.gray
+//        view.activeColor = UIColor(named: "ic_color")
         view.translatesAutoresizingMaskIntoConstraints = false
         view.placeholder = "Taylor Swift"
         view.textColor = .black
-        
+
         return view
     }()
     
@@ -81,14 +80,14 @@ class FirstScreenViewController: UINavigationController{
         return view
     }()
     
-    lazy var passwordTextfield: IsaoTextField = {
-        let view = IsaoTextField()
-        view.activeColor = UIColor(named: "ic_color")
-        view.inactiveColor = UIColor.gray
+    lazy var passwordTextfield: UITextField = {
+        let view = UITextField()
+//        view.activeColor = UIColor(named: "ic_color")
+//        view.inactiveColor = UIColor.gray
         view.translatesAutoresizingMaskIntoConstraints = false
         view.placeholder = "Password"
         view.textColor = .gray
-        
+
         return view
     }()
     
