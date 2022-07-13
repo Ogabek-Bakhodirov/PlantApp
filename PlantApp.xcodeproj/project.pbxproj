@@ -7,7 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		18A906D228758C150043E67D /* FirstScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A906D128758C150043E67D /* FirstScreenViewController.swift */; };
+		18CF17162875E34000D2E57F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18CF17152875E33F00D2E57F /* LoginViewController.swift */; };
 		2C1A86E228749AF4009600F9 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C1A86E128749AF4009600F9 /* OnboardingViewController.swift */; };
+		2CB8B8EC287737DD001E53B6 /* TestCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB8B8EB287737DD001E53B6 /* TestCollectionViewController.swift */; };
+		2CB8B8EE287738B8001E53B6 /* TestCollectionItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB8B8ED287738B8001E53B6 /* TestCollectionItemCell.swift */; };
 		2CDF1DAB2874960900F0BC12 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CDF1DAA2874960900F0BC12 /* AppDelegate.swift */; };
 		2CDF1DB42874960B00F0BC12 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2CDF1DB32874960B00F0BC12 /* Assets.xcassets */; };
 		2CDF1DB72874960B00F0BC12 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2CDF1DB52874960B00F0BC12 /* LaunchScreen.storyboard */; };
@@ -20,7 +24,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		18A906D128758C150043E67D /* FirstScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstScreenViewController.swift; sourceTree = "<group>"; };
+		18CF17152875E33F00D2E57F /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		2C1A86E128749AF4009600F9 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
+		2CB8B8EB287737DD001E53B6 /* TestCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestCollectionViewController.swift; sourceTree = "<group>"; };
+		2CB8B8ED287738B8001E53B6 /* TestCollectionItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestCollectionItemCell.swift; sourceTree = "<group>"; };
 		2CDF1DA72874960900F0BC12 /* PlantApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlantApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CDF1DAA2874960900F0BC12 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2CDF1DB32874960B00F0BC12 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -50,6 +58,7 @@
 			children = (
 				2CDF1DA92874960900F0BC12 /* PlantApp */,
 				2CDF1DA82874960900F0BC12 /* Products */,
+				E9919BEB6BC1CD1491EFFB4D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -65,18 +74,30 @@
 			isa = PBXGroup;
 			children = (
 				2CDF1DAA2874960900F0BC12 /* AppDelegate.swift */,
-				2C1A86E128749AF4009600F9 /* OnboardingViewController.swift */,
 				80AC9F6D2875A53E006BC246 /* SignUpViewController.swift */,
 				80AC9F9728788FD8006BC246 /* SpeciesViewController.swift */,
 				80AC9F992878B2DE006BC246 /* SpeciesTableViewCell.swift */,
 				80AC9F9B287A1D06006BC246 /* ListPlantViewController.swift */,
+				80AC9F6B28757284006BC246 /* Constants.swift */,
+				2CB8B8EB287737DD001E53B6 /* TestCollectionViewController.swift */,
+				2CB8B8ED287738B8001E53B6 /* TestCollectionItemCell.swift */,
 				2CDF1DB32874960B00F0BC12 /* Assets.xcassets */,
 				2CDF1DB52874960B00F0BC12 /* LaunchScreen.storyboard */,
 				2CDF1DB82874960B00F0BC12 /* Info.plist */,
+				2C1A86E128749AF4009600F9 /* OnboardingViewController.swift */,
+				18A906D128758C150043E67D /* FirstScreenViewController.swift */,
+				18CF17152875E33F00D2E57F /* LoginViewController.swift */,
 				80AC9F6B28757284006BC246 /* Constants.swift */,
 				80AC9F9528774687006BC246 /* ContentButton.swift */,
 			);
 			path = PlantApp;
+			sourceTree = "<group>";
+		};
+		E9919BEB6BC1CD1491EFFB4D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -152,10 +173,14 @@
 				80AC9F9A2878B2DE006BC246 /* SpeciesTableViewCell.swift in Sources */,
 				2C1A86E228749AF4009600F9 /* OnboardingViewController.swift in Sources */,
 				80AC9F9C287A1D06006BC246 /* ListPlantViewController.swift in Sources */,
+				18CF17162875E34000D2E57F /* LoginViewController.swift in Sources */,
+				2CB8B8EE287738B8001E53B6 /* TestCollectionItemCell.swift in Sources */,
+				18A906D228758C150043E67D /* FirstScreenViewController.swift in Sources */,
 				2CDF1DAB2874960900F0BC12 /* AppDelegate.swift in Sources */,
 				80AC9F9628774687006BC246 /* ContentButton.swift in Sources */,
 				80AC9F9828788FD8006BC246 /* SpeciesViewController.swift in Sources */,
 				80AC9F6E2875A53E006BC246 /* SignUpViewController.swift in Sources */,
+				2CB8B8EC287737DD001E53B6 /* TestCollectionViewController.swift in Sources */,
 				80AC9F6C28757284006BC246 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
