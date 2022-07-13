@@ -18,6 +18,9 @@
 		80AC9F6C28757284006BC246 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80AC9F6B28757284006BC246 /* Constants.swift */; };
 		80AC9F6E2875A53E006BC246 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80AC9F6D2875A53E006BC246 /* SignUpViewController.swift */; };
 		80AC9F9628774687006BC246 /* ContentButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80AC9F9528774687006BC246 /* ContentButton.swift */; };
+		80AC9F9828788FD8006BC246 /* SpeciesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80AC9F9728788FD8006BC246 /* SpeciesViewController.swift */; };
+		80AC9F9A2878B2DE006BC246 /* SpeciesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80AC9F992878B2DE006BC246 /* SpeciesTableViewCell.swift */; };
+		80AC9F9C287A1D06006BC246 /* ListPlantViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80AC9F9B287A1D06006BC246 /* ListPlantViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +37,9 @@
 		80AC9F6B28757284006BC246 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		80AC9F6D2875A53E006BC246 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		80AC9F9528774687006BC246 /* ContentButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentButton.swift; sourceTree = "<group>"; };
+		80AC9F9728788FD8006BC246 /* SpeciesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeciesViewController.swift; sourceTree = "<group>"; };
+		80AC9F992878B2DE006BC246 /* SpeciesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeciesTableViewCell.swift; sourceTree = "<group>"; };
+		80AC9F9B287A1D06006BC246 /* ListPlantViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListPlantViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,8 +74,10 @@
 			isa = PBXGroup;
 			children = (
 				2CDF1DAA2874960900F0BC12 /* AppDelegate.swift */,
-				2C1A86E128749AF4009600F9 /* OnboardingViewController.swift */,
 				80AC9F6D2875A53E006BC246 /* SignUpViewController.swift */,
+				80AC9F9728788FD8006BC246 /* SpeciesViewController.swift */,
+				80AC9F992878B2DE006BC246 /* SpeciesTableViewCell.swift */,
+				80AC9F9B287A1D06006BC246 /* ListPlantViewController.swift */,
 				80AC9F6B28757284006BC246 /* Constants.swift */,
 				2CB8B8EB287737DD001E53B6 /* TestCollectionViewController.swift */,
 				2CB8B8ED287738B8001E53B6 /* TestCollectionItemCell.swift */,
@@ -162,12 +170,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				80AC9F9A2878B2DE006BC246 /* SpeciesTableViewCell.swift in Sources */,
+				2C1A86E228749AF4009600F9 /* OnboardingViewController.swift in Sources */,
+				80AC9F9C287A1D06006BC246 /* ListPlantViewController.swift in Sources */,
 				18CF17162875E34000D2E57F /* LoginViewController.swift in Sources */,
 				2CB8B8EE287738B8001E53B6 /* TestCollectionItemCell.swift in Sources */,
-				2C1A86E228749AF4009600F9 /* OnboardingViewController.swift in Sources */,
 				18A906D228758C150043E67D /* FirstScreenViewController.swift in Sources */,
 				2CDF1DAB2874960900F0BC12 /* AppDelegate.swift in Sources */,
 				80AC9F9628774687006BC246 /* ContentButton.swift in Sources */,
+				80AC9F9828788FD8006BC246 /* SpeciesViewController.swift in Sources */,
 				80AC9F6E2875A53E006BC246 /* SignUpViewController.swift in Sources */,
 				2CB8B8EC287737DD001E53B6 /* TestCollectionViewController.swift in Sources */,
 				80AC9F6C28757284006BC246 /* Constants.swift in Sources */,

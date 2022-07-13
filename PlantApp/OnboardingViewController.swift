@@ -22,7 +22,8 @@ class OnboardingViewController: UIViewController {
         let view = UIImageView()
         view.translatesAutoresizingMaskIntoConstraints = false
         view.contentMode = .scaleAspectFit
-        view.image = Constant.OnboardingImages.identifyPageImage
+        view.image = 
+        Images.identifyPageImage
 
         return view
     }()
@@ -30,9 +31,9 @@ class OnboardingViewController: UIViewController {
     lazy var titleLabel: UILabel = {
         let view = UILabel()
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.text = Constant.TitleLabels.identifyPageTitleLabel
+        view.text = TitleLabels.identifyPageTitleLabel
         view.font = .systemFont(ofSize: 19.0, weight: .bold)
-        view.textColor = Constant.Colors.mainTitleColor
+        view.textColor = Colors.mainTitleColor
         view.setContentHuggingPriority(.defaultHigh, for: .vertical)
         view.setContentCompressionResistancePriority(.defaultHigh, for: .vertical)
         view.textAlignment = .center
@@ -43,13 +44,13 @@ class OnboardingViewController: UIViewController {
     lazy var descriptionLabel: UILabel = {
         let view = UILabel()
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.text = Constant.DescriptionLabels.identifyPageDescription
+        view.text = DescriptionLabels.identifyPageDescription
         view.numberOfLines = 3
         view.minimumScaleFactor = 0.7
         view.contentMode = .top
         view.textAlignment = .center
         view.font = .systemFont(ofSize: 13.0, weight: .regular)
-        view.textColor = Constant.Colors.mainTitleColor
+        view.textColor = Colors.mainTitleColor
         view.setContentHuggingPriority(.defaultLow, for: .vertical)
         view.setContentCompressionResistancePriority(.defaultLow, for: .vertical)
 
@@ -71,7 +72,8 @@ class OnboardingViewController: UIViewController {
         let view = UIImageView()
         view.translatesAutoresizingMaskIntoConstraints = false
         view.contentMode = .scaleAspectFit
-        view.image = Constant.DotImages.identifyPageDot
+        view.image = 
+        Images.identifyPageDot
         view.setContentHuggingPriority(.defaultHigh, for: .vertical)
         view.setContentCompressionResistancePriority(.defaultHigh, for: .vertical)
 
@@ -93,7 +95,7 @@ class OnboardingViewController: UIViewController {
         let view = UIButton()
         view.translatesAutoresizingMaskIntoConstraints = false
         view.setTitle("Next", for: .normal)
-        view.backgroundColor = Constant.Colors.onboardingBtnColor
+        view.backgroundColor = Colors.onboardingBtnColor
         view.setTitleColor(.white, for: .normal)
         view.addTarget(self, action: #selector(nextButtonTapped(on:)), for: .touchUpInside)
 
@@ -103,7 +105,7 @@ class OnboardingViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        view.backgroundColor = Constant.Colors.mainBgColor
+        view.backgroundColor = Colors.mainBgColor
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -158,15 +160,19 @@ class OnboardingViewController: UIViewController {
         case .identifyPage:
             print("1")
         case .learPage:
-            mainImageView.image = Constant.OnboardingImages.learnPageImage
-            titleLabel.text = Constant.TitleLabels.learnPageTitleLabel
-            descriptionLabel.text = Constant.DescriptionLabels.learnPageDescription
-            dotImageView.image = Constant.DotImages.learnPageDot
+            mainImageView.image = 
+            Images.learnPageImage
+            titleLabel.text = TitleLabels.learnPageTitleLabel
+            descriptionLabel.text = DescriptionLabels.learnPageDescription
+            dotImageView.image = 
+            Images.learnPageDot
         case .readPage:
-            mainImageView.image = Constant.OnboardingImages.readPageImage
-            titleLabel.text = Constant.TitleLabels.readPageTitleLabel
-            descriptionLabel.text = Constant.DescriptionLabels.readPageDescription
-            dotImageView.image = Constant.DotImages.readPageDot
+            mainImageView.image = 
+            Images.readPageImage
+            titleLabel.text = TitleLabels.readPageTitleLabel
+            descriptionLabel.text = DescriptionLabels.readPageDescription
+            dotImageView.image = 
+            Images.readPageDot
             nextButton.setTitle("Sign up", for: .normal)
         }
     }
