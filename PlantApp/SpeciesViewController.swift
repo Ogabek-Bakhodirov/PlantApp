@@ -11,7 +11,12 @@ class SpeciesViewController: UIViewController{
     
     let alphabet = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y"]
     
-    let plantName = ["CACTUS", "CISTUS", "CAESALPENIA", "CINNAMOUM", "CIRSIUM", "CISSUS"]
+    let plantName = [
+        ["ACACIA", "ACANTHUS", "ALOE", "AMARANTH", "ARUM"],
+        ["BERGENIA", "BEGONIA", "BEE BALM", "BELLFLOWER", "BALLOON"],
+        ["CACTUS", "CISTUS", "CAESALPENIA", "CINNAMOUM", "CIRSIUM", "CISSUS"],
+        ["DIERAMA", "DIGITALIS", "DAHLIA", "DAPHNE"],
+    ]
     
     
     lazy var backgroundTopImage: UIImageView = {
@@ -114,7 +119,7 @@ class SpeciesViewController: UIViewController{
             searchBar.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -23),
             searchBar.heightAnchor.constraint(equalToConstant: 50),
             
-            speciesTableView.topAnchor.constraint(equalTo: backgroundTopImage.bottomAnchor),
+            speciesTableView.topAnchor.constraint(equalTo: backgroundTopImage.bottomAnchor, constant: 30),
             speciesTableView.leftAnchor.constraint(equalTo: view.leftAnchor),
             speciesTableView.rightAnchor.constraint(equalTo: view.rightAnchor),            
             speciesTableView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -30), 
@@ -133,38 +138,19 @@ extension SpeciesViewController: UITableViewDelegate, UITableViewDataSource{
         
     }
     
-    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return alphabet[section]
-    }
-    
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let headerView = UIView()
+        headerView.backgroundColor = .systemGray6
         
         let label = UILabel()
         label.textColor = Colors.onboardingBtnColor
         label.font = .systemFont(ofSize: 20, weight: .bold)
         label.text = alphabet[section]
+        label.frame = CGRect(x: 25, y: 0, width: 20, height: 15)
         
-//        lazy var titleForHeader: UILabel = {
-//            let label = UILabel()
-//            label.translatesAutoresizingMaskIntoConstraints = false
-//            label.textColor = Colors.onboardingBtnColor
-//            label.font = .systemFont(ofSize: 20, weight: .bold)
-//            label.text = alphabet[section]
-//            
-//            return label
-//        }()
-        
-//        lazy var headerView: UIView = {
-//            let view = UIView()
-//            view.translatesAutoresizingMaskIntoConstraints = false 
-//            view.addSubview(titleForHeader)
-//        }()
-//        
-//        
-//        label.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 23).isActive = true
-//        label.topAnchor.constraint(equalTo: view.topAnchor, constant: 5).isActive = true
-    
-        return label
+        headerView.addSubview(label)
+            
+        return headerView
     }
     
     func sectionIndexTitles(for tableView: UITableView) -> [String]? {
@@ -173,11 +159,11 @@ extension SpeciesViewController: UITableViewDelegate, UITableViewDataSource{
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return alphabet.count
+        return plantName.count
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        plantName.count
+        plantName[section].count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -185,7 +171,7 @@ extension SpeciesViewController: UITableViewDelegate, UITableViewDataSource{
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "SpeciesTableViewCell") as? SpeciesTableViewCell else { return UITableViewCell() } 
         
         cell.selectionStyle = .none
-        cell.speciesLabel.text = plantName[indexPath.row]
+        cell.speciesLabel.text = plantName[indexPath.section][indexPath.row]
         
         return cell
     }
