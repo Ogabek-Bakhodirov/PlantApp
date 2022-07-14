@@ -14,7 +14,7 @@ class TestCollectionItemCell: UICollectionViewCell {
     lazy var titleLabel: UILabel = {
         let view = UILabel()
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.text = "Title"
+//        view.text = "Title"
         view.setContentHuggingPriority(.defaultHigh, for: .vertical)
         view.setContentCompressionResistancePriority(.defaultHigh, for: .vertical)
 
@@ -24,7 +24,7 @@ class TestCollectionItemCell: UICollectionViewCell {
     lazy var subtitleLabel: UILabel = {
         let view = UILabel()
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.text = "Sub Title"
+//        view.text = "Sub Title"
 
         return view
     }()

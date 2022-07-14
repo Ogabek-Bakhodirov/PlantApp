@@ -8,7 +8,6 @@
 import UIKit
 
 class SpeciesViewController: UIViewController{
-    
     let alphabet = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y"]
     
     let plantName = ["C", "CACTUS", "CISTUS", "CAESALPENIA", "CINNAMOUM", "CIRSIUM", "CISSUS"]
@@ -164,7 +163,7 @@ extension SpeciesViewController: UITableViewDelegate, UITableViewDataSource{
         label.text = alphabet[section]
         label.textAlignment = .left
 
-        return label
+        return view
     }
 }
 
