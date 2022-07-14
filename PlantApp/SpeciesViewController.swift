@@ -134,7 +134,37 @@ extension SpeciesViewController: UITableViewDelegate, UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return "A"
+        return alphabet[section]
+    }
+    
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        
+        let label = UILabel()
+        label.textColor = Colors.onboardingBtnColor
+        label.font = .systemFont(ofSize: 20, weight: .bold)
+        label.text = alphabet[section]
+        
+//        lazy var titleForHeader: UILabel = {
+//            let label = UILabel()
+//            label.translatesAutoresizingMaskIntoConstraints = false
+//            label.textColor = Colors.onboardingBtnColor
+//            label.font = .systemFont(ofSize: 20, weight: .bold)
+//            label.text = alphabet[section]
+//            
+//            return label
+//        }()
+        
+//        lazy var headerView: UIView = {
+//            let view = UIView()
+//            view.translatesAutoresizingMaskIntoConstraints = false 
+//            view.addSubview(titleForHeader)
+//        }()
+//        
+//        
+//        label.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 23).isActive = true
+//        label.topAnchor.constraint(equalTo: view.topAnchor, constant: 5).isActive = true
+    
+        return label
     }
     
     func sectionIndexTitles(for tableView: UITableView) -> [String]? {
