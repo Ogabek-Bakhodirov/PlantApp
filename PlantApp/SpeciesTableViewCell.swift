@@ -9,12 +9,10 @@ import UIKit
 
 class SpeciesTableViewCell: UITableViewCell{
     
-    lazy var speciesButton: UIButton = {
-        let view = UIButton()
+    lazy var speciesLabel: UILabel = {
+        let view = UILabel()
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.setTitle("A", for: .normal)
-        view.setTitleColor(Colors.spaciesPagetextColor, for: .normal)
-        view.backgroundColor = .clear
+        view.textColor = Colors.spaciesPagetextColor
         view.contentMode = .left
         
         return view
@@ -33,11 +31,11 @@ class SpeciesTableViewCell: UITableViewCell{
     }
     
     func setupSubviews(){
-        addSubview(speciesButton)
+        addSubview(speciesLabel)
         
         NSLayoutConstraint.activate([
-            speciesButton.topAnchor.constraint(equalTo: self.topAnchor, constant: 10),
-            speciesButton.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 25),
+            speciesLabel.topAnchor.constraint(equalTo: self.topAnchor, constant: 10),
+            speciesLabel.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 25),
         ])
     }
 }

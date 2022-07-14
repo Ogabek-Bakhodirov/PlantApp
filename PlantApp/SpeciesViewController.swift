@@ -9,9 +9,9 @@ import UIKit
 
 class SpeciesViewController: UIViewController{
     
-    let alphabet = ["#", "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y"]
+    let alphabet = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y"]
     
-    let plantName = ["C", "CACTUS", "CISTUS", "CAESALPENIA", "CINNAMOUM", "CIRSIUM", "CISSUS"]
+    let plantName = ["CACTUS", "CISTUS", "CAESALPENIA", "CINNAMOUM", "CIRSIUM", "CISSUS"]
     
     
     lazy var backgroundTopImage: UIImageView = {
@@ -125,12 +125,16 @@ class SpeciesViewController: UIViewController{
 extension SpeciesViewController: UITableViewDelegate, UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("A")
+        
         let listPlantViewController = ListPlantViewController()
         listPlantViewController.modalTransitionStyle = .crossDissolve
         listPlantViewController.modalPresentationStyle = .fullScreen
         present(listPlantViewController, animated: true)
         
+    }
+    
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return "A"
     }
     
     func sectionIndexTitles(for tableView: UITableView) -> [String]? {
@@ -151,8 +155,7 @@ extension SpeciesViewController: UITableViewDelegate, UITableViewDataSource{
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "SpeciesTableViewCell") as? SpeciesTableViewCell else { return UITableViewCell() } 
         
         cell.selectionStyle = .none
-        cell.speciesButton.setTitle(plantName[indexPath.row], for: .normal)
-        cell.speciesButton.setTitleColor(indexPath.row == 0 ? Colors.onboardingBtnColor : Colors.spaciesPagetextColor, for: .normal)
+        cell.speciesLabel.text = plantName[indexPath.row]
         
         return cell
     }
