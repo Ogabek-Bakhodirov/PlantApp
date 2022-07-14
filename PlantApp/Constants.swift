@@ -17,7 +17,10 @@ struct Images{
     static var speciesPage_bg_img = UIImage(named: "speciesPage_bg_img")
     static var kebab_menu_img = UIImage(named: "kebab_menu_img") 
     static var search = UIImage(named: "ic_search") 
-    static var listPlants = UIImage(named: "listPlantsPage_bg_img") 
+    static var listPlantsBackground = UIImage(named: "listPlantsPage_bg_img")
+    static var redCactus = UIImage(named: "red_cactus_img")
+    static var fatCactus = UIImage(named: "fat_cactus_img")
+    static var circleCactus = UIImage(named: "circle_cactus_img")
 }
 
 struct Colors{
