@@ -96,23 +96,23 @@ class SpeciesViewController: UIViewController{
         view.addSubview(searchBar)
         
         NSLayoutConstraint.activate([
-            backgroundTopImage.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
+            backgroundTopImage.topAnchor.constraint(equalTo: view.topAnchor),
             backgroundTopImage.leftAnchor.constraint(equalTo: view.leftAnchor),
             backgroundTopImage.rightAnchor.constraint(equalTo: view.rightAnchor),
             
-            speciesBackButton.topAnchor.constraint(equalTo: backgroundTopImage.topAnchor, constant: 29),
+            speciesBackButton.topAnchor.constraint(equalTo: backgroundTopImage.topAnchor, constant: 50),
             speciesBackButton.leftAnchor.constraint(equalTo: backgroundTopImage.leftAnchor, constant: 20),
             speciesBackButton.heightAnchor.constraint(equalToConstant: 24),
             speciesBackButton.widthAnchor.constraint(equalToConstant: 24),
             
-            speciesMenuButton.topAnchor.constraint(equalTo: backgroundTopImage.topAnchor, constant: 29),
+            speciesMenuButton.topAnchor.constraint(equalTo: backgroundTopImage.topAnchor, constant: 50),
             speciesMenuButton.rightAnchor.constraint(equalTo: backgroundTopImage.rightAnchor, constant: -20),
             speciesMenuButton.heightAnchor.constraint(equalToConstant: 24),
             speciesMenuButton.widthAnchor.constraint(equalToConstant: 24),
             
             speciesTitle.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
             speciesTitle.leftAnchor.constraint(equalTo: backgroundTopImage.leftAnchor, constant: 20),
-            speciesTitle.bottomAnchor.constraint(equalTo: backgroundTopImage.bottomAnchor, constant: 45),
+            speciesTitle.bottomAnchor.constraint(equalTo: backgroundTopImage.bottomAnchor, constant: 25),
             
             searchBar.topAnchor.constraint(equalTo: backgroundTopImage.bottomAnchor, constant: -33),
             searchBar.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 23),
