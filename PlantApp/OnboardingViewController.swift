@@ -146,7 +146,7 @@ class OnboardingViewController: UIViewController {
         case 3:
             page = Page.readPage
         default:
-            let signUpViewController = FirstScreenViewController()
+            let signUpViewController = LoginPageViewController2()
             signUpViewController.modalTransitionStyle = .crossDissolve
             signUpViewController.modalPresentationStyle = .fullScreen
             present(signUpViewController, animated: true)
