@@ -18,7 +18,6 @@ class SpeciesViewController: UIViewController{
         ["DIERAMA", "DIGITALIS", "DAHLIA", "DAPHNE"],
     ]
     
-    
     lazy var backgroundTopImage: UIImageView = {
         let view = UIImageView()
         view.translatesAutoresizingMaskIntoConstraints = false
@@ -72,7 +71,7 @@ class SpeciesViewController: UIViewController{
         view.translatesAutoresizingMaskIntoConstraints = false
         view.delegate = self
         view.dataSource = self
-        view.register(SpeciesTableViewCell.self, forCellReuseIdentifier: "SpeciesTableViewCell")
+        view.register(SpeciesTableViewCell.self, forCellReuseIdentifier: SpeciesTableViewCell.identifier)
         view.separatorStyle = .none
         view.backgroundColor = .systemGray6
         
@@ -168,12 +167,25 @@ extension SpeciesViewController: UITableViewDelegate, UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "SpeciesTableViewCell") as? SpeciesTableViewCell else { return UITableViewCell() } 
-        
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: SpeciesTableViewCell.identifier) as? SpeciesTableViewCell else { return UITableViewCell() }
         cell.selectionStyle = .none
         cell.speciesLabel.text = plantName[indexPath.section][indexPath.row]
         
         return cell
+    }
+
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return alphabet[section]
+    }
+
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let label = UILabel()
+        label.font = .systemFont(ofSize: 30.0, weight: .bold)
+        label.textColor = Colors.onboardingBtnColor
+        label.text = alphabet[section]
+        label.textAlignment = .left
+
+        return view
     }
 }
 

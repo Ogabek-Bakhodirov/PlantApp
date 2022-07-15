@@ -8,13 +8,15 @@
 import UIKit
 
 class SpeciesTableViewCell: UITableViewCell{
-    
+    static let identifier: String = String(describing: SpeciesTableViewCell.self)
+
     lazy var speciesLabel: UILabel = {
         let view = UILabel()
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.textColor = Colors.spaciesPagetextColor
+        view.backgroundColor = .clear
         view.contentMode = .left
-        
+        view.textColor = Colors.spaciesPagetextColor
+
         return view
     }()
 
