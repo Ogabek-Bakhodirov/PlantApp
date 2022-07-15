@@ -45,7 +45,8 @@ class ButtonsCell: UICollectionViewCell {
     lazy var button: UIButton = {
         let view = UIButton()
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.addTarget(self, action: #selector(buttonTapped(on:)), for: .touchUpInside)
+        view.isUserInteractionEnabled = false
+        
         return view
     }()
     
@@ -84,9 +85,4 @@ class ButtonsCell: UICollectionViewCell {
             button.bottomAnchor.constraint(equalTo: buttonView.bottomAnchor),
         ])
     }
-    
-    @objc func buttonTapped(on button: UIButton){
-        print("Tapped")
-    }
-    
 }

@@ -142,6 +142,26 @@ extension MainViewController: UICollectionViewDelegate , UICollectionViewDataSou
         }
         return 0
     }
+
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if indexPath.section == 1 {
+            switch indexPath.item {
+            case 0:
+                break
+            case 1:
+                let vc = SpeciesViewController()
+                vc.modalTransitionStyle = .flipHorizontal
+                vc.modalPresentationStyle = .fullScreen
+                present(vc, animated: true)
+                break
+            case 2:
+                break
+            default:
+                break
+            }
+        }
+    }
+
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         if indexPath.section == 0 {
@@ -160,9 +180,7 @@ extension MainViewController: UICollectionViewDelegate , UICollectionViewDataSou
             return cell
         } else if indexPath.section == 1 {
             guard let cell = contectCollectionView.dequeueReusableCell(withReuseIdentifier:"ButtonsCell" , for: indexPath) as? ButtonsCell else {
-                let cell = contectCollectionView.dequeueReusableCell(withReuseIdentifier:"UICollectionViewCell" , for: indexPath)
-                cell.backgroundColor = .red
-                return cell
+                return UICollectionViewCell()
             }
             return cell
         } else if indexPath.section == 3 {
