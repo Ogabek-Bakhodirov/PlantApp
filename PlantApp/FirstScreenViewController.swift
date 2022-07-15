@@ -46,22 +46,13 @@ class FirstScreenViewController: UINavigationController{
     
     lazy var usernameTextfield: UITextField = {
         let view = UITextField()
-//        view.inactiveColor = UIColor.gray
-//        view.activeColor = UIColor(named: "ic_color")
         view.translatesAutoresizingMaskIntoConstraints = false
         view.placeholder = "Taylor Swift"
         view.textColor = .black
 
         return view
     }()
-    
-//    lazy var lineView: UIView = {
-//        let view = UIView()
-//        view.backgroundColor = changeLineColor(usernameTextfield.text ?? "")
-//
-//        return view
-//    }()
-    
+
     lazy var checkUsernameIcon: UIImageView = {
         let view = UIImageView()
         view.translatesAutoresizingMaskIntoConstraints = false
@@ -82,8 +73,6 @@ class FirstScreenViewController: UINavigationController{
     
     lazy var passwordTextfield: UITextField = {
         let view = UITextField()
-//        view.activeColor = UIColor(named: "ic_color")
-//        view.inactiveColor = UIColor.gray
         view.translatesAutoresizingMaskIntoConstraints = false
         view.placeholder = "Password"
         view.textColor = .gray
@@ -206,7 +195,6 @@ class FirstScreenViewController: UINavigationController{
         let view = UIStackView(arrangedSubviews: [accountLabel,signUpButton])
         view.translatesAutoresizingMaskIntoConstraints = false
         view.axis = .horizontal
-//        view.distribution = .fillEqually
         view.center = self.view.center
         view.spacing = 1.0
         
@@ -217,7 +205,6 @@ class FirstScreenViewController: UINavigationController{
         let view = UIStackView(arrangedSubviews: [helloLabel,subtitleLabel,usernameLabel,textfieldStack,infoStack,loginButton,signStack])
         view.translatesAutoresizingMaskIntoConstraints = false
         view.axis = .vertical
-//        view.distribution = .fillEqually
         view.spacing = 16.0
         
         return view
@@ -240,15 +227,10 @@ class FirstScreenViewController: UINavigationController{
             contentStackView.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -23.0),
             contentStackView.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.50),
             
-//            lineView2.bottomAnchor.constraint(equalTo: textfieldStack.bottomAnchor, constant: -150.0),
-            
             signStack.rightAnchor.constraint(equalTo: contentStackView.rightAnchor, constant: -70.0),
             
             signStack.heightAnchor.constraint(equalToConstant: 10.0),
-            
-//            lineView.heightAnchor.constraint(equalToConstant: 2.0),
-//            lineView2.heightAnchor.constraint(equalToConstant: 2.0),
-            
+
             checkRememberButton.heightAnchor.constraint(equalTo: infoStack.heightAnchor, multiplier: 0.23),
             checkRememberButton.widthAnchor.constraint(equalToConstant: 15.0),
             
@@ -283,35 +265,10 @@ class FirstScreenViewController: UINavigationController{
     }
     
     @objc func loginPressed(){
-        let viewController = LoginViewController()
+        let viewController = UIViewController()
         viewController.modalTransitionStyle = .flipHorizontal
         viewController.modalPresentationStyle = .fullScreen
         
         present(viewController, animated: true)
     }
-    
-//    func changeCheckIcon()->UIImage {
-//        if usernameTextfield.inactiveColor == UIColor.gray{
-//            return UIImage(named: "space_box") ?? UIImage(named: "space_box")!
-//        }else if usernameTextfield.activeColor == UIColor(named: "ic_color"){
-//            return UIImage(named: "username_check") ?? UIImage(named: "space_box")!
-//        }
-//        return UIImage(named: "space_box") ?? UIImage(named: "space_box")!
-//    }
-    
-//    func changeLineColor(_ text: String)->UIColor{
-//        if usernameTextfield.text != ""{
-//            guard let color = UIColor(named: "ic_color") else { return UIColor.gray }
-//            return color
-//        }else{
-//            let color = UIColor.gray
-//            return color
-//        }
-//    }
 }
-
-//extension FirstScreenViewController {
-//        open override func awakeFromNib() {
-//            navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
-//        }
-//}

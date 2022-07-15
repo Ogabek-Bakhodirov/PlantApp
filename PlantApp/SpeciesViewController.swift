@@ -177,16 +177,16 @@ extension SpeciesViewController: UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         return alphabet[section]
     }
-
-    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        let label = UILabel()
-        label.font = .systemFont(ofSize: 30.0, weight: .bold)
-        label.textColor = Colors.onboardingBtnColor
-        label.text = alphabet[section]
-        label.textAlignment = .left
-
-        return view
-    }
+//
+//    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+//        let label = UILabel()
+//        label.font = .systemFont(ofSize: 30.0, weight: .bold)
+//        label.textColor = Colors.onboardingBtnColor
+//        label.text = alphabet[section]
+//        label.textAlignment = .left
+//
+//        return view
+//    }
 }
 
 extension UITextField {
