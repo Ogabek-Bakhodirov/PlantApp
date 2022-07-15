@@ -9,6 +9,7 @@ import UIKit
 
 struct Plant {
     var name: String
+    var image: UIImage?
 }
 
 struct PlantGroup {
@@ -29,9 +30,11 @@ class SpeciesLoader: SpeciesLoadProtocol {
 
         alphabet.forEach { name in
             var plantGroup = PlantGroup(groupName: name)
-            let plant1 = Plant(name: name + "ABSDFEGD 1")
-            let plant2 = Plant(name: name + "ABSDFEGD 2")
-            let plant3 = Plant(name: name + "ABSDFEGD 3")
+            let images = [Images.redCactus, Images.fatCactus, Images.circleCactus]
+
+            let plant1 = Plant(name: name + "ABSDFEGD 1", image: images[0])
+            let plant2 = Plant(name: name + "ABSDFEGD 2", image: images[1])
+            let plant3 = Plant(name: name + "ABSDFEGD 3", image: images[2])
 
             plantGroup.plants = [plant1, plant2, plant3]
 
@@ -171,6 +174,7 @@ extension SpeciesViewController: UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         let listPlantViewController = ListPlantsViewController()
+        listPlantViewController.plants = plantsGroups[indexPath.section].plants
         listPlantViewController.modalTransitionStyle = .crossDissolve
         listPlantViewController.modalPresentationStyle = .fullScreen
         present(listPlantViewController, animated: true)
