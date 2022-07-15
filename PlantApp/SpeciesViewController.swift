@@ -7,8 +7,19 @@
 
 import UIKit
 
+struct Plant {
+    var name: String
+}
+
+struct PlantGroup {
+    let groupName: String
+    let plants: [Plant] = []
+}
+
 class SpeciesViewController: UIViewController{
-    
+
+    var plantsGroups: [PlantGroup] = []
+
     let alphabet = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y"]
     
     let plantName = [
@@ -154,7 +165,9 @@ extension SpeciesViewController: UITableViewDelegate, UITableViewDataSource{
     
     func sectionIndexTitles(for tableView: UITableView) -> [String]? {
         tableView.sectionIndexColor = #colorLiteral(red: 0.4156862745, green: 0.4352941176, blue: 0.4901960784, alpha: 1)
-        return alphabet
+        let plantNames = plantsGroups.map { $0.groupName }
+
+        return plantNames
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -177,16 +190,6 @@ extension SpeciesViewController: UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         return alphabet[section]
     }
-//
-//    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-//        let label = UILabel()
-//        label.font = .systemFont(ofSize: 30.0, weight: .bold)
-//        label.textColor = Colors.onboardingBtnColor
-//        label.text = alphabet[section]
-//        label.textAlignment = .left
-//
-//        return view
-//    }
 }
 
 extension UITextField {
