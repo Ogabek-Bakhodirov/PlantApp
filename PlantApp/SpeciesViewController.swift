@@ -13,21 +13,40 @@ struct Plant {
 
 struct PlantGroup {
     let groupName: String
-    let plants: [Plant] = []
+    var plants: [Plant] = []
+}
+
+protocol SpeciesLoadProtocol {
+    func loadSpeieces() -> [PlantGroup]
+}
+
+// Loading data from remote/baza/storage
+
+class SpeciesLoader: SpeciesLoadProtocol {
+    func loadSpeieces() -> [PlantGroup] {
+        let alphabet = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y"]
+        var plantsGroups: [PlantGroup] = []
+
+        alphabet.forEach { name in
+            var plantGroup = PlantGroup(groupName: name)
+            let plant1 = Plant(name: name + "ABSDFEGD 1")
+            let plant2 = Plant(name: name + "ABSDFEGD 2")
+            let plant3 = Plant(name: name + "ABSDFEGD 3")
+
+            plantGroup.plants = [plant1, plant2, plant3]
+
+            plantsGroups.append(plantGroup)
+        }
+
+        return plantsGroups
+    }
 }
 
 class SpeciesViewController: UIViewController{
 
+    var loader: SpeciesLoadProtocol?
     var plantsGroups: [PlantGroup] = []
 
-    let alphabet = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y"]
-    
-    let plantName = [
-        ["ACACIA", "ACANTHUS", "ALOE", "AMARANTH", "ARUM"],
-        ["BERGENIA", "BEGONIA", "BEE BALM", "BELLFLOWER", "BALLOON"],
-        ["CACTUS", "CISTUS", "CAESALPENIA", "CINNAMOUM", "CIRSIUM", "CISSUS"],
-        ["DIERAMA", "DIGITALIS", "DAHLIA", "DAPHNE"],
-    ]
     
     lazy var backgroundTopImage: UIImageView = {
         let view = UIImageView()
@@ -95,8 +114,18 @@ class SpeciesViewController: UIViewController{
         view.backgroundColor = .systemGray6
         
         setupSubviews()
+
+        loadData()
     }
-    
+
+    func loadData() {
+
+        if let loader = loader {
+            plantsGroups = loader.loadSpeieces()
+            speciesTableView.reloadData()
+        }
+    }
+
     func setupSubviews(){
         view.addSubview(backgroundTopImage)
         view.addSubview(speciesBackButton)
@@ -155,7 +184,7 @@ extension SpeciesViewController: UITableViewDelegate, UITableViewDataSource{
         let label = UILabel()
         label.textColor = Colors.onboardingBtnColor
         label.font = .systemFont(ofSize: 20, weight: .bold)
-        label.text = alphabet[section]
+        label.text = plantsGroups[section].groupName
         label.frame = CGRect(x: 25, y: 0, width: 20, height: 15)
         
         headerView.addSubview(label)
@@ -171,24 +200,24 @@ extension SpeciesViewController: UITableViewDelegate, UITableViewDataSource{
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return plantName.count
+        return plantsGroups.count
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        plantName[section].count
+        plantsGroups[section].plants.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         guard let cell = tableView.dequeueReusableCell(withIdentifier: SpeciesTableViewCell.identifier) as? SpeciesTableViewCell else { return UITableViewCell() }
         cell.selectionStyle = .none
-        cell.speciesLabel.text = plantName[indexPath.section][indexPath.row]
+        cell.speciesLabel.text = plantsGroups[indexPath.section].plants[indexPath.row].name
         
         return cell
     }
 
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return alphabet[section]
+        return plantsGroups[section].groupName
     }
 }
 

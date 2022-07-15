@@ -50,6 +50,7 @@
 		6EA7F8FF2881C82700EA6186 /* Tabbar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tabbar.swift; sourceTree = "<group>"; };
 		6EA7F9052881C83500EA6186 /* LoginPageViewController2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginPageViewController2.swift; sourceTree = "<group>"; };
 		6EA7F9072881C84700EA6186 /* ButtonsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonsCell.swift; sourceTree = "<group>"; };
+		6EA7F90D2881D04E00EA6186 /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyPlayground.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		80AC9F6B28757284006BC246 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		80AC9F9528774687006BC246 /* ContentButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentButton.swift; sourceTree = "<group>"; };
 		80AC9F9728788FD8006BC246 /* SpeciesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeciesViewController.swift; sourceTree = "<group>"; };
@@ -112,6 +113,7 @@
 				80AC9F6B28757284006BC246 /* Constants.swift */,
 				80AC9F9528774687006BC246 /* ContentButton.swift */,
 				2CCA95F9287F20C500C64A93 /* CollectionViewControler.swift */,
+				6EA7F90D2881D04E00EA6186 /* MyPlayground.playground */,
 			);
 			path = PlantApp;
 			sourceTree = "<group>";
