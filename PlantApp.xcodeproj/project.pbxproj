@@ -103,7 +103,6 @@
 				2CDF1DB52874960B00F0BC12 /* LaunchScreen.storyboard */,
 				2CDF1DB82874960B00F0BC12 /* Info.plist */,
 				80AC9F6B28757284006BC246 /* Constants.swift */,
-				185B52C32882439F00F0ABF6 /* DetailArticles.swift */,
 			);
 			path = PlantApp;
 			sourceTree = "<group>";
@@ -118,6 +117,7 @@
 		6EEA10852883238700026F09 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				185B52C32882439F00F0ABF6 /* DetailArticles.swift */,
 				6EA7F8F92881C7FF00EA6186 /* MainViewController.swift */,
 				2C1A86E128749AF4009600F9 /* OnboardingViewController.swift */,
 				18A906D128758C150043E67D /* FirstScreenViewController.swift */,
