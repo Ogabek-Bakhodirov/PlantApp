@@ -90,6 +90,7 @@
 		2CDF1DA92874960900F0BC12 /* PlantApp */ = {
 			isa = PBXGroup;
 			children = (
+				6EA7F90D2881D04E00EA6186 /* MyPlayground.playground */,
 				6EA7F9072881C84700EA6186 /* ButtonsCell.swift */,
 				6EA7F9052881C83500EA6186 /* LoginPageViewController2.swift */,
 				6EA7F8FE2881C82700EA6186 /* MainCell.swift */,
@@ -113,7 +114,6 @@
 				80AC9F6B28757284006BC246 /* Constants.swift */,
 				80AC9F9528774687006BC246 /* ContentButton.swift */,
 				2CCA95F9287F20C500C64A93 /* CollectionViewControler.swift */,
-				6EA7F90D2881D04E00EA6186 /* MyPlayground.playground */,
 			);
 			path = PlantApp;
 			sourceTree = "<group>";
