@@ -7,13 +7,23 @@
 
 import UIKit
 
+enum Page {
+    case identifyPage
+    case learPage
+    case readPage
+}
+
 class OnboardingViewController: UIViewController {
 
+    private var pageNumber = 1
+    private var page = Page.identifyPage
+    
     lazy var mainImageView: UIImageView = {
         let view = UIImageView()
         view.translatesAutoresizingMaskIntoConstraints = false
         view.contentMode = .scaleAspectFit
-        view.image = UIImage(named: "ic_onboarding_identify")
+        view.image = 
+        Images.identifyPageImage
 
         return view
     }()
@@ -21,9 +31,9 @@ class OnboardingViewController: UIViewController {
     lazy var titleLabel: UILabel = {
         let view = UILabel()
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.text = "Identify Plants"
+        view.text = TitleLabels.identifyPageTitleLabel
         view.font = .systemFont(ofSize: 19.0, weight: .bold)
-        view.textColor = UIColor(named: "main_title_color")
+        view.textColor = Colors.mainTitleColor
         view.setContentHuggingPriority(.defaultHigh, for: .vertical)
         view.setContentCompressionResistancePriority(.defaultHigh, for: .vertical)
         view.textAlignment = .center
@@ -34,13 +44,13 @@ class OnboardingViewController: UIViewController {
     lazy var descriptionLabel: UILabel = {
         let view = UILabel()
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.text = "You can identify the plants you don't know through your camera"
+        view.text = DescriptionLabels.identifyPageDescription
         view.numberOfLines = 3
         view.minimumScaleFactor = 0.7
         view.contentMode = .top
         view.textAlignment = .center
         view.font = .systemFont(ofSize: 13.0, weight: .regular)
-        view.textColor = UIColor(named: "main_title_color")
+        view.textColor = Colors.mainTitleColor
         view.setContentHuggingPriority(.defaultLow, for: .vertical)
         view.setContentCompressionResistancePriority(.defaultLow, for: .vertical)
 
@@ -62,7 +72,8 @@ class OnboardingViewController: UIViewController {
         let view = UIImageView()
         view.translatesAutoresizingMaskIntoConstraints = false
         view.contentMode = .scaleAspectFit
-        view.image = UIImage(named: "ic_dots_1")
+        view.image = 
+        Images.identifyPageDot
         view.setContentHuggingPriority(.defaultHigh, for: .vertical)
         view.setContentCompressionResistancePriority(.defaultHigh, for: .vertical)
 
@@ -79,11 +90,22 @@ class OnboardingViewController: UIViewController {
 
         return view
     }()
+    
+    lazy var nextButton: UIButton = {
+        let view = UIButton()
+        view.translatesAutoresizingMaskIntoConstraints = false
+        view.setTitle("Next", for: .normal)
+        view.backgroundColor = Colors.onboardingBtnColor
+        view.setTitleColor(.white, for: .normal)
+        view.addTarget(self, action: #selector(nextButtonTapped(on:)), for: .touchUpInside)
+
+        return view
+    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        view.backgroundColor = UIColor(named: "main_bg")
+        view.backgroundColor = Colors.mainBgColor
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -94,6 +116,7 @@ class OnboardingViewController: UIViewController {
 
     private func setupSubviews() {
         view.addSubview(contentStack)
+        view.addSubview(nextButton)
 
         NSLayoutConstraint.activate([
             mainImageView.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 60.0),
@@ -104,6 +127,53 @@ class OnboardingViewController: UIViewController {
             contentStack.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 20.0),
             contentStack.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -20.0),
 //            contentStack.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.6)
+            
+            nextButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -65.0),
+            nextButton.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 20.0),
+            nextButton.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -20.0),
+            nextButton.heightAnchor.constraint(equalToConstant: 50)
         ])
+    }
+    
+    @objc func nextButtonTapped(on: UIButton){
+        pageNumber += 1
+        
+        switch pageNumber{
+        case 1:
+            page = Page.identifyPage
+        case 2:
+            page = Page.learPage
+        case 3:
+            page = Page.readPage
+        default:
+            let signUpViewController = LoginPageViewController2()
+            signUpViewController.modalTransitionStyle = .crossDissolve
+            signUpViewController.modalPresentationStyle = .fullScreen
+            present(signUpViewController, animated: true)
+        }
+        
+        changeMainPageElements()
+    }
+    
+    private func changeMainPageElements(){
+        switch page {
+        case .identifyPage:
+            print("1")
+        case .learPage:
+            mainImageView.image = 
+            Images.learnPageImage
+            titleLabel.text = TitleLabels.learnPageTitleLabel
+            descriptionLabel.text = DescriptionLabels.learnPageDescription
+            dotImageView.image = 
+            Images.learnPageDot
+        case .readPage:
+            mainImageView.image = 
+            Images.readPageImage
+            titleLabel.text = TitleLabels.readPageTitleLabel
+            descriptionLabel.text = DescriptionLabels.readPageDescription
+            dotImageView.image = 
+            Images.readPageDot
+            nextButton.setTitle("Sign up", for: .normal)
+        }
     }
 }
