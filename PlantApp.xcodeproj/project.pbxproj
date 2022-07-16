@@ -94,34 +94,50 @@
 		2CDF1DA92874960900F0BC12 /* PlantApp */ = {
 			isa = PBXGroup;
 			children = (
+				6EEA10852883238700026F09 /* ViewController */,
+				6EEA10842883237D00026F09 /* Utils */,
 				6EA7F90D2881D04E00EA6186 /* MyPlayground.playground */,
 				6EA7F9072881C84700EA6186 /* ButtonsCell.swift */,
-				6EA7F9052881C83500EA6186 /* LoginPageViewController2.swift */,
 				6EA7F8FE2881C82700EA6186 /* MainCell.swift */,
 				6EA7F8FD2881C82700EA6186 /* PhotoPlantsCell.swift */,
 				6EA7F8FF2881C82700EA6186 /* Tabbar.swift */,
-				6EA7F8FC2881C82700EA6186 /* TabBarController.swift */,
 				6EA7F8FB2881C82700EA6186 /* TypePlantsCell.swift */,
-				6EA7F8F92881C7FF00EA6186 /* MainViewController.swift */,
 				2CDF1DAA2874960900F0BC12 /* AppDelegate.swift */,
-				80AC9F9728788FD8006BC246 /* SpeciesViewController.swift */,
 				80AC9F992878B2DE006BC246 /* SpeciesTableViewCell.swift */,
 				80AC9FA12880BA91006BC246 /* ListPlantsTableViewCell.swift */,
-				80AC9F9B287A1D06006BC246 /* ListPlantsViewController.swift */,
-				2CB8B8EB287737DD001E53B6 /* TestCollectionViewController.swift */,
 				2CB8B8ED287738B8001E53B6 /* TestCollectionItemCell.swift */,
 				2CDF1DB32874960B00F0BC12 /* Assets.xcassets */,
 				2CDF1DB52874960B00F0BC12 /* LaunchScreen.storyboard */,
 				2CDF1DB82874960B00F0BC12 /* Info.plist */,
-				2C1A86E128749AF4009600F9 /* OnboardingViewController.swift */,
-				18A906D128758C150043E67D /* FirstScreenViewController.swift */,
 				80AC9F6B28757284006BC246 /* Constants.swift */,
 				80AC9F9528774687006BC246 /* ContentButton.swift */,
-				2CCA95F9287F20C500C64A93 /* CollectionViewControler.swift */,
 				185B52C32882439F00F0ABF6 /* DetailArticles.swift */,
 				185B52C52882476F00F0ABF6 /* DetailArticlesCollectionViewCell.swift */,
 			);
 			path = PlantApp;
+			sourceTree = "<group>";
+		};
+		6EEA10842883237D00026F09 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		6EEA10852883238700026F09 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				6EA7F8F92881C7FF00EA6186 /* MainViewController.swift */,
+				2C1A86E128749AF4009600F9 /* OnboardingViewController.swift */,
+				18A906D128758C150043E67D /* FirstScreenViewController.swift */,
+				6EA7F8FC2881C82700EA6186 /* TabBarController.swift */,
+				6EA7F9052881C83500EA6186 /* LoginPageViewController2.swift */,
+				80AC9F9728788FD8006BC246 /* SpeciesViewController.swift */,
+				80AC9F9B287A1D06006BC246 /* ListPlantsViewController.swift */,
+				2CB8B8EB287737DD001E53B6 /* TestCollectionViewController.swift */,
+				2CCA95F9287F20C500C64A93 /* CollectionViewControler.swift */,
+			);
+			path = ViewController;
 			sourceTree = "<group>";
 		};
 		E9919BEB6BC1CD1491EFFB4D /* Frameworks */ = {
