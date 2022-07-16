@@ -7,7 +7,6 @@
 
 import UIKit
 
-
 enum Images {
     case identifyPageImage
     case learnPageImage
