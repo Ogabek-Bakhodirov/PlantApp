@@ -16,7 +16,7 @@ class PhotoPlantsCell: UICollectionViewCell {
         view.text = "  #mini  "
         view.font = .monospacedSystemFont(ofSize: 10, weight: .medium)
         view.textColor = .black
-        view.backgroundColor = Colors1.mainBgColor.color
+        view.backgroundColor = Colors.mainBgColor.color
         view.setContentHuggingPriority(.defaultHigh, for: .vertical)
         
         return view
