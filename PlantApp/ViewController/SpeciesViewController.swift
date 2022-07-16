@@ -30,7 +30,7 @@ class SpeciesLoader: SpeciesLoadProtocol {
 
         alphabet.forEach { name in
             var plantGroup = PlantGroup(groupName: name)
-            let images = [Images1.redCactus.image, Images1.fatCactus.image, Images1.circleCactus.image]
+            let images = [Images.redCactus.image, Images.fatCactus.image, Images.circleCactus.image]
 
             let plant1 = Plant(name: name + "ABSDFEGD 1", image: images[0])
             let plant2 = Plant(name: name + "ABSDFEGD 2", image: images[1])
@@ -54,7 +54,7 @@ class SpeciesViewController: UIViewController{
     lazy var backgroundTopImage: UIImageView = {
         let view = UIImageView()
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.image = Images1.speciesPage_bg_img.image
+        view.image = Images.speciesPage_bg_img.image
         
         return view
     }()
@@ -71,7 +71,7 @@ class SpeciesViewController: UIViewController{
     lazy var speciesMenuButton: UIButton = {
         let view = UIButton()
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.setImage(Images1.kebab_menu_img.image, for: .normal)
+        view.setImage(Images.kebab_menu_img.image, for: .normal)
         
         return view
     }()

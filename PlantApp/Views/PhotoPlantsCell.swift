@@ -25,7 +25,7 @@ class PhotoPlantsCell: UICollectionViewCell {
     lazy var mainImage: UIImageView = {
         let view = UIImageView()
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.image = (Int.random(in: 0...3) != 0) ? Images1.mainPageflowerImage1.image : Images1.mainPageflowerImage3.image
+        view.image = (Int.random(in: 0...3) != 0) ? Images.mainPageflowerImage1.image : Images.mainPageflowerImage3.image
         view.contentMode = .scaleToFill
         
         return view

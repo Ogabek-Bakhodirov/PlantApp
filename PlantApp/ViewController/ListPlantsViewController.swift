@@ -13,7 +13,7 @@ class ListPlantsViewController: UIViewController{
     lazy var backgroundTopImage: UIImageView = {
         let view = UIImageView()
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.image = Images1.listPlantsBackground.image
+        view.image = Images.listPlantsBackground.image
         
         return view
     }()
@@ -31,7 +31,7 @@ class ListPlantsViewController: UIViewController{
     lazy var speciesMenuButton: UIButton = {
         let view = UIButton()
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.setImage(Images1.kebab_menu_img.image, for: .normal)
+        view.setImage(Images.kebab_menu_img.image, for: .normal)
         
         return view
     }()

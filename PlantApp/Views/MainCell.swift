@@ -42,14 +42,14 @@ class MainCell: UICollectionViewCell {
     lazy var userImage: UIImageView = {
         let view = UIImageView()
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.image = Images1.mainPageUserPhoto.image
+        view.image = Images.mainPageUserPhoto.image
         view.contentMode = .scaleAspectFit
         return view
     }()
     lazy var backgroundImage: UIImageView = {
         let view = UIImageView()
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.image = Images1.mainPageBackgroundImage.image
+        view.image = Images.mainPageBackgroundImage.image
         view.contentMode = .scaleToFill
         view.backgroundColor = .clear
         view.tintColor = .white

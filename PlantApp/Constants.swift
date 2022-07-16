@@ -8,7 +8,7 @@
 import UIKit
 
 
-enum Images1 {
+enum Images {
     case identifyPageImage
     case learnPageImage
     case readPageImage
@@ -63,7 +63,6 @@ enum Labels {
     case learnPageDescription
     case readPageDescription
     case loginPageDescription
-
 
     var label: String {
         switch self {
