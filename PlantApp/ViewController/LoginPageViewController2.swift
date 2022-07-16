@@ -33,7 +33,7 @@ class LoginPageViewController2: UIViewController {
     private lazy var mainLabel: UILabel = {
         var view = UILabel()
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.text = Labels.loginPageTitleLabel.label
+        view.text = Strings.loginPageTitleLabel.value
         view.textColor = Colors.mainTitleColor.color
         view.font = UIFont(name: "'SF Pro Text'", size: 30.0)
         view.font = .systemFont(ofSize: 30.0, weight: .bold)
@@ -43,7 +43,7 @@ class LoginPageViewController2: UIViewController {
     private lazy var descriptionLabel: UILabel = {
         var view = UILabel()
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.text = Labels.loginPageDescription.label
+        view.text = Strings.loginPageDescription.value
         view.textColor = Colors.mainSubtitleColor.color
         view.font = .systemFont(ofSize: 16.0, weight: .regular)
         view.font = UIFont(name: "'SF Pro Text'", size: 16.0)

@@ -72,7 +72,7 @@ enum Colors {
     }
 }
 
-enum Labels {
+enum Strings {
     case identifyPageTitleLabel
     case learnPageTitleLabel
     case readPageTitleLabel
@@ -83,7 +83,7 @@ enum Labels {
     case loginPageDescription
     case loginPageSubtitleLabel
 
-    var label: String {
+    var value: String {
         switch self {
             case .identifyPageTitleLabel: return "Identify Plants"
             case .learnPageTitleLabel: return "Learn Many Plants Species"

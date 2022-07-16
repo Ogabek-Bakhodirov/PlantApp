@@ -29,7 +29,7 @@ class OnboardingViewController: UIViewController {
     lazy var titleLabel: UILabel = {
         let view = UILabel()
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.text = Labels.identifyPageTitleLabel.label
+        view.text = Strings.identifyPageTitleLabel.value
         view.font = .systemFont(ofSize: 19.0, weight: .bold)
         view.textColor = Colors.mainTitleColor.color
         view.setContentHuggingPriority(.defaultHigh, for: .vertical)
@@ -42,7 +42,7 @@ class OnboardingViewController: UIViewController {
     lazy var descriptionLabel: UILabel = {
         let view = UILabel()
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.text = Labels.identifyPageDescription.label
+        view.text = Strings.identifyPageDescription.value
         view.numberOfLines = 3
         view.minimumScaleFactor = 0.7
         view.contentMode = .top
@@ -157,13 +157,13 @@ class OnboardingViewController: UIViewController {
             print("1")
         case .learPage:
             mainImageView.image = Images.learnPageImage.image
-            titleLabel.text = Labels.learnPageTitleLabel.label
-            descriptionLabel.text = Labels.learnPageDescription.label
+            titleLabel.text = Strings.learnPageTitleLabel.value
+            descriptionLabel.text = Strings.learnPageDescription.value
             dotImageView.image = Images.learnPageDot.image
         case .readPage:
             mainImageView.image = Images.readPageImage.image
-            titleLabel.text = Labels.readPageTitleLabel.label
-            descriptionLabel.text = Labels.readPageDescription.label
+            titleLabel.text = Strings.readPageTitleLabel.value
+            descriptionLabel.text = Strings.readPageDescription.value
             dotImageView.image = Images.readPageDot.image
             nextButton.setTitle("Sign up", for: .normal)
         }

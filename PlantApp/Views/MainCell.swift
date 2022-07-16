@@ -22,7 +22,7 @@ class MainCell: UICollectionViewCell {
    private lazy var descriptionLabel: UILabel = {
         let view = UILabel()
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.text = Labels.loginPageDescription.label
+        view.text = Strings.loginPageDescription.value
         view.font = .monospacedSystemFont(ofSize: 14, weight: .regular)
         view.textColor = .white
        
