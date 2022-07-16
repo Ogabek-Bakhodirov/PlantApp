@@ -14,7 +14,6 @@ enum Page {
 }
 
 class OnboardingViewController: UIViewController {
-
     private var pageNumber = 1
     private var page = Page.identifyPage
     
@@ -30,7 +29,7 @@ class OnboardingViewController: UIViewController {
     lazy var titleLabel: UILabel = {
         let view = UILabel()
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.text = TitleLabels.identifyPageTitleLabel
+        view.text = Labels.identifyPageTitleLabel.label
         view.font = .systemFont(ofSize: 19.0, weight: .bold)
         view.textColor = Colors.mainTitleColor.color
         view.setContentHuggingPriority(.defaultHigh, for: .vertical)
@@ -43,7 +42,7 @@ class OnboardingViewController: UIViewController {
     lazy var descriptionLabel: UILabel = {
         let view = UILabel()
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.text = DescriptionLabels.identifyPageDescription
+        view.text = Labels.identifyPageDescription.label
         view.numberOfLines = 3
         view.minimumScaleFactor = 0.7
         view.contentMode = .top
@@ -124,8 +123,7 @@ class OnboardingViewController: UIViewController {
             contentStack.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 100.0),
             contentStack.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 20.0),
             contentStack.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -20.0),
-//            contentStack.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.6)
-            
+
             nextButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -65.0),
             nextButton.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 20.0),
             nextButton.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -20.0),
@@ -159,13 +157,13 @@ class OnboardingViewController: UIViewController {
             print("1")
         case .learPage:
             mainImageView.image = Images.learnPageImage.image
-            titleLabel.text = TitleLabels.learnPageTitleLabel
-            descriptionLabel.text = DescriptionLabels.learnPageDescription
+            titleLabel.text = Labels.learnPageTitleLabel.label
+            descriptionLabel.text = Labels.learnPageDescription.label
             dotImageView.image = Images.learnPageDot.image
         case .readPage:
             mainImageView.image = Images.readPageImage.image
-            titleLabel.text = TitleLabels.readPageTitleLabel
-            descriptionLabel.text = DescriptionLabels.readPageDescription
+            titleLabel.text = Labels.readPageTitleLabel.label
+            descriptionLabel.text = Labels.readPageDescription.label
             dotImageView.image = Images.readPageDot.image
             nextButton.setTitle("Sign up", for: .normal)
         }

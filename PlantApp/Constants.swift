@@ -54,31 +54,7 @@ enum Images {
     }
 }
 
-enum Labels {
-    case identifyPageTitleLabel
-    case learnPageTitleLabel
-    case readPageTitleLabel
-    case loginPageTitleLabel
-    case identifyPageDescription
-    case learnPageDescription
-    case readPageDescription
-    case loginPageDescription
-
-    var label: String {
-        switch self {
-            case .identifyPageTitleLabel: return "Identify Plants"
-            case .learnPageTitleLabel: return "Learn Many Plants Species"
-            case .readPageTitleLabel: return "Read Many Articles About Plant"
-            case .loginPageTitleLabel: return  "Hello"
-            case .identifyPageDescription: return "You can identify the plants you don't know through your camera"
-            case .learnPageDescription: return "Let's learn about the many plant species that exist in this world"
-            case .readPageDescription: return "Let's learn more about beautiful plants and read many articles about plants and gardening"
-            case .loginPageDescription: return "Let’s Learn More About Plants"
-        }
-    }
-}
-
-enum Colors1 {
+enum Colors {
     case mainBgColor
     case mainTitleColor
     case onboardingBtnColor
@@ -96,20 +72,28 @@ enum Colors1 {
     }
 }
 
-struct TitleLabels{
-    static var identifyPageTitleLabel = "Identify Plants"
-    static var learnPageTitleLabel = "Learn Many Plants Species"
-    static var readPageTitleLabel = "Read Many Articles About Plant"
-    static var loginPageTitleLabel = "Hello"
-}
-struct SubtitleLabels {
-    static var loginPageSubtitleLabel = "Username"
-}
+enum Labels {
+    case identifyPageTitleLabel
+    case learnPageTitleLabel
+    case readPageTitleLabel
+    case loginPageTitleLabel
+    case identifyPageDescription
+    case learnPageDescription
+    case readPageDescription
+    case loginPageDescription
+    case loginPageSubtitleLabel
 
-struct DescriptionLabels{
-    static var identifyPageDescription = "You can identify the plants you don't know through your camera"
-    static var learnPageDescription = "Let's learn about the many plant species that exist in this world"
-    static var readPageDescription = "Let's learn more about beautiful plants and read many articles about plants and gardening"
-    static var loginPageDescription = "Let’s Learn More About Plants"
+    var label: String {
+        switch self {
+            case .identifyPageTitleLabel: return "Identify Plants"
+            case .learnPageTitleLabel: return "Learn Many Plants Species"
+            case .readPageTitleLabel: return "Read Many Articles About Plant"
+            case .loginPageTitleLabel: return  "Hello"
+            case .identifyPageDescription: return "You can identify the plants you don't know through your camera"
+            case .learnPageDescription: return "Let's learn about the many plant species that exist in this world"
+            case .readPageDescription: return "Let's learn more about beautiful plants and read many articles about plants and gardening"
+            case .loginPageDescription: return "Let’s Learn More About Plants"
+            case .loginPageSubtitleLabel: return "Username"
+        }
+    }
 }
-
