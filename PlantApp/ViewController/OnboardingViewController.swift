@@ -22,8 +22,7 @@ class OnboardingViewController: UIViewController {
         let view = UIImageView()
         view.translatesAutoresizingMaskIntoConstraints = false
         view.contentMode = .scaleAspectFit
-        view.image = 
-        Images.identifyPageImage
+        view.image = Images1.identifyPageImage.image
 
         return view
     }()
@@ -72,8 +71,7 @@ class OnboardingViewController: UIViewController {
         let view = UIImageView()
         view.translatesAutoresizingMaskIntoConstraints = false
         view.contentMode = .scaleAspectFit
-        view.image = 
-        Images.identifyPageDot
+        view.image = Images1.identifyPageDot.image
         view.setContentHuggingPriority(.defaultHigh, for: .vertical)
         view.setContentCompressionResistancePriority(.defaultHigh, for: .vertical)
 
@@ -160,19 +158,15 @@ class OnboardingViewController: UIViewController {
         case .identifyPage:
             print("1")
         case .learPage:
-            mainImageView.image = 
-            Images.learnPageImage
+            mainImageView.image = Images1.learnPageImage.image
             titleLabel.text = TitleLabels.learnPageTitleLabel
             descriptionLabel.text = DescriptionLabels.learnPageDescription
-            dotImageView.image = 
-            Images.learnPageDot
+            dotImageView.image = Images1.learnPageDot.image
         case .readPage:
-            mainImageView.image = 
-            Images.readPageImage
+            mainImageView.image = Images1.readPageImage.image
             titleLabel.text = TitleLabels.readPageTitleLabel
             descriptionLabel.text = DescriptionLabels.readPageDescription
-            dotImageView.image = 
-            Images.readPageDot
+            dotImageView.image = Images1.readPageDot.image
             nextButton.setTitle("Sign up", for: .normal)
         }
     }

@@ -21,6 +21,14 @@ enum Images1 {
     case mainPageflowerImage3
     case mainPagePlantImage
     case mainPageBackgroundImage
+    case speciesPage_bg_img
+    case kebab_menu_img
+    case search
+    case listPlantsBackground
+    case redCactus
+    case fatCactus
+    case circleCactus
+
     var image: UIImage? {
         switch self {
         case .identifyPageImage: return  UIImage(named: "ic_onboarding_identify")
@@ -35,7 +43,13 @@ enum Images1 {
         case .mainPageflowerImage3: return UIImage(named: "ic_flower_3")
         case .mainPagePlantImage: return UIImage(named: "ic_plant_1")
         case .mainPageBackgroundImage: return UIImage(named: "ic_main_bg")
-
+        case .speciesPage_bg_img: return UIImage(named: "speciesPage_bg_img")
+        case .kebab_menu_img: return UIImage(named: "kebab_menu_img")
+        case .search: return UIImage(named: "ic_search")
+        case .listPlantsBackground: return UIImage(named: "listPlantsPage_bg_img")
+        case .redCactus: return UIImage(named: "red_cactus_img")
+        case .fatCactus: return UIImage(named: "fat_cactus_img")
+        case .circleCactus: return UIImage(named: "circle_cactus_img")
         }
     }
 }
@@ -91,22 +105,6 @@ enum Colors1 {
             return UIColor(named: "main_subtitle_color")
         }
     }
-}
-
-struct Images {
-    static var identifyPageImage = UIImage(named: "ic_onboarding_identify")
-    static var learnPageImage = UIImage(named: "ic_onboarding_learn")
-    static var readPageImage = UIImage(named: "ic_onboarding_read")
-    static var identifyPageDot = UIImage(named: "ic_dots_1")
-    static var learnPageDot = UIImage(named: "ic_dots_2")
-    static var readPageDot = UIImage(named: "ic_dots_3")
-    static var speciesPage_bg_img = UIImage(named: "speciesPage_bg_img")
-    static var kebab_menu_img = UIImage(named: "kebab_menu_img")
-    static var search = UIImage(named: "ic_search")
-    static var listPlantsBackground = UIImage(named: "listPlantsPage_bg_img")
-    static var redCactus = UIImage(named: "red_cactus_img")
-    static var fatCactus = UIImage(named: "fat_cactus_img")
-    static var circleCactus = UIImage(named: "circle_cactus_img")
 }
 
 struct Colors{
