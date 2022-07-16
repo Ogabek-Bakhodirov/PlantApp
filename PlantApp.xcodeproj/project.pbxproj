@@ -94,14 +94,11 @@
 		2CDF1DA92874960900F0BC12 /* PlantApp */ = {
 			isa = PBXGroup;
 			children = (
+				2CDF1DAA2874960900F0BC12 /* AppDelegate.swift */,
+				6EEA10872883246E00026F09 /* Sources */,
 				6EEA1086288323E000026F09 /* Views */,
 				6EEA10852883238700026F09 /* ViewController */,
 				6EEA10842883237D00026F09 /* Utils */,
-				6EA7F90D2881D04E00EA6186 /* MyPlayground.playground */,
-				2CDF1DAA2874960900F0BC12 /* AppDelegate.swift */,
-				2CDF1DB32874960B00F0BC12 /* Assets.xcassets */,
-				2CDF1DB52874960B00F0BC12 /* LaunchScreen.storyboard */,
-				2CDF1DB82874960B00F0BC12 /* Info.plist */,
 				80AC9F6B28757284006BC246 /* Constants.swift */,
 			);
 			path = PlantApp;
@@ -110,6 +107,9 @@
 		6EEA10842883237D00026F09 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				6EA7F90D2881D04E00EA6186 /* MyPlayground.playground */,
+				2CDF1DB52874960B00F0BC12 /* LaunchScreen.storyboard */,
+				2CDF1DB82874960B00F0BC12 /* Info.plist */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -146,6 +146,14 @@
 				6EA7F8FD2881C82700EA6186 /* PhotoPlantsCell.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		6EEA10872883246E00026F09 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				2CDF1DB32874960B00F0BC12 /* Assets.xcassets */,
+			);
+			path = Sources;
 			sourceTree = "<group>";
 		};
 		E9919BEB6BC1CD1491EFFB4D /* Frameworks */ = {
