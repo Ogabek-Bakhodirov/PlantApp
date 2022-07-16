@@ -94,25 +94,16 @@
 		2CDF1DA92874960900F0BC12 /* PlantApp */ = {
 			isa = PBXGroup;
 			children = (
+				6EEA1086288323E000026F09 /* Views */,
 				6EEA10852883238700026F09 /* ViewController */,
 				6EEA10842883237D00026F09 /* Utils */,
 				6EA7F90D2881D04E00EA6186 /* MyPlayground.playground */,
-				6EA7F9072881C84700EA6186 /* ButtonsCell.swift */,
-				6EA7F8FE2881C82700EA6186 /* MainCell.swift */,
-				6EA7F8FD2881C82700EA6186 /* PhotoPlantsCell.swift */,
-				6EA7F8FF2881C82700EA6186 /* Tabbar.swift */,
-				6EA7F8FB2881C82700EA6186 /* TypePlantsCell.swift */,
 				2CDF1DAA2874960900F0BC12 /* AppDelegate.swift */,
-				80AC9F992878B2DE006BC246 /* SpeciesTableViewCell.swift */,
-				80AC9FA12880BA91006BC246 /* ListPlantsTableViewCell.swift */,
-				2CB8B8ED287738B8001E53B6 /* TestCollectionItemCell.swift */,
 				2CDF1DB32874960B00F0BC12 /* Assets.xcassets */,
 				2CDF1DB52874960B00F0BC12 /* LaunchScreen.storyboard */,
 				2CDF1DB82874960B00F0BC12 /* Info.plist */,
 				80AC9F6B28757284006BC246 /* Constants.swift */,
-				80AC9F9528774687006BC246 /* ContentButton.swift */,
 				185B52C32882439F00F0ABF6 /* DetailArticles.swift */,
-				185B52C52882476F00F0ABF6 /* DetailArticlesCollectionViewCell.swift */,
 			);
 			path = PlantApp;
 			sourceTree = "<group>";
@@ -138,6 +129,23 @@
 				2CCA95F9287F20C500C64A93 /* CollectionViewControler.swift */,
 			);
 			path = ViewController;
+			sourceTree = "<group>";
+		};
+		6EEA1086288323E000026F09 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				6EA7F8FF2881C82700EA6186 /* Tabbar.swift */,
+				2CB8B8ED287738B8001E53B6 /* TestCollectionItemCell.swift */,
+				80AC9F9528774687006BC246 /* ContentButton.swift */,
+				185B52C52882476F00F0ABF6 /* DetailArticlesCollectionViewCell.swift */,
+				80AC9FA12880BA91006BC246 /* ListPlantsTableViewCell.swift */,
+				6EA7F8FE2881C82700EA6186 /* MainCell.swift */,
+				80AC9F992878B2DE006BC246 /* SpeciesTableViewCell.swift */,
+				6EA7F9072881C84700EA6186 /* ButtonsCell.swift */,
+				6EA7F8FB2881C82700EA6186 /* TypePlantsCell.swift */,
+				6EA7F8FD2881C82700EA6186 /* PhotoPlantsCell.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		E9919BEB6BC1CD1491EFFB4D /* Frameworks */ = {
