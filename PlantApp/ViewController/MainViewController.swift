@@ -13,7 +13,7 @@ class MainViewController: UIViewController {
         var view = UILabel()
         view.translatesAutoresizingMaskIntoConstraints = false
         view.text =  "hello bro"
-        view.textColor = Colors1.mainTitleColor.color
+        view.textColor = Colors.mainTitleColor.color
         view.font = UIFont(name: "'SF Pro Text'", size: 30.0)
         view.font = .systemFont(ofSize: 30.0, weight: .bold)
         //        view.heightAnchor.constraint(equalToConstant: 30.0)

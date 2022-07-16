@@ -12,7 +12,7 @@ class ListPlantsTableViewCell: UITableViewCell{
     lazy var plantImage: UIImageView = {
         let view = UIImageView()
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.image = Images.redCactus
+        view.image = Images.redCactus.image
         view.layer.borderColor = UIColor.white.cgColor
         view.layer.borderWidth = 6
         view.layer.cornerRadius = 8
