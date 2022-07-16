@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		185B52C42882439F00F0ABF6 /* DetailArticles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185B52C32882439F00F0ABF6 /* DetailArticles.swift */; };
+		185B52C62882476F00F0ABF6 /* DetailArticlesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185B52C52882476F00F0ABF6 /* DetailArticlesCollectionViewCell.swift */; };
 		18A906D228758C150043E67D /* FirstScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A906D128758C150043E67D /* FirstScreenViewController.swift */; };
 		2C1A86E228749AF4009600F9 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C1A86E128749AF4009600F9 /* OnboardingViewController.swift */; };
 		2CB8B8EC287737DD001E53B6 /* TestCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB8B8EB287737DD001E53B6 /* TestCollectionViewController.swift */; };
@@ -32,6 +34,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		185B52C32882439F00F0ABF6 /* DetailArticles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailArticles.swift; sourceTree = "<group>"; };
+		185B52C52882476F00F0ABF6 /* DetailArticlesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailArticlesCollectionViewCell.swift; sourceTree = "<group>"; };
 		18A906D128758C150043E67D /* FirstScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstScreenViewController.swift; sourceTree = "<group>"; };
 		2C1A86E128749AF4009600F9 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		2CB8B8EB287737DD001E53B6 /* TestCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestCollectionViewController.swift; sourceTree = "<group>"; };
@@ -114,6 +118,8 @@
 				80AC9F6B28757284006BC246 /* Constants.swift */,
 				80AC9F9528774687006BC246 /* ContentButton.swift */,
 				2CCA95F9287F20C500C64A93 /* CollectionViewControler.swift */,
+				185B52C32882439F00F0ABF6 /* DetailArticles.swift */,
+				185B52C52882476F00F0ABF6 /* DetailArticlesCollectionViewCell.swift */,
 			);
 			path = PlantApp;
 			sourceTree = "<group>";
@@ -198,6 +204,7 @@
 				80AC9F9A2878B2DE006BC246 /* SpeciesTableViewCell.swift in Sources */,
 				6EA7F9012881C82700EA6186 /* TabBarController.swift in Sources */,
 				2C1A86E228749AF4009600F9 /* OnboardingViewController.swift in Sources */,
+				185B52C42882439F00F0ABF6 /* DetailArticles.swift in Sources */,
 				80AC9F9C287A1D06006BC246 /* ListPlantsViewController.swift in Sources */,
 				80AC9F9C287A1D06006BC246 /* ListPlantsViewController.swift in Sources */,
 				6EA7F9082881C84700EA6186 /* ButtonsCell.swift in Sources */,
@@ -215,6 +222,7 @@
 				6EA7F9022881C82700EA6186 /* PhotoPlantsCell.swift in Sources */,
 				80AC9F9828788FD8006BC246 /* SpeciesViewController.swift in Sources */,
 				2CB8B8EC287737DD001E53B6 /* TestCollectionViewController.swift in Sources */,
+				185B52C62882476F00F0ABF6 /* DetailArticlesCollectionViewCell.swift in Sources */,
 				80AC9F6C28757284006BC246 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
