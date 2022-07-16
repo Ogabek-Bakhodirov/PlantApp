@@ -32,7 +32,7 @@ class OnboardingViewController: UIViewController {
         view.translatesAutoresizingMaskIntoConstraints = false
         view.text = TitleLabels.identifyPageTitleLabel
         view.font = .systemFont(ofSize: 19.0, weight: .bold)
-        view.textColor = Colors.mainTitleColor
+        view.textColor = Colors1.mainTitleColor.color
         view.setContentHuggingPriority(.defaultHigh, for: .vertical)
         view.setContentCompressionResistancePriority(.defaultHigh, for: .vertical)
         view.textAlignment = .center
@@ -49,7 +49,7 @@ class OnboardingViewController: UIViewController {
         view.contentMode = .top
         view.textAlignment = .center
         view.font = .systemFont(ofSize: 13.0, weight: .regular)
-        view.textColor = Colors.mainTitleColor
+        view.textColor = Colors1.mainTitleColor.color
         view.setContentHuggingPriority(.defaultLow, for: .vertical)
         view.setContentCompressionResistancePriority(.defaultLow, for: .vertical)
 
@@ -93,7 +93,7 @@ class OnboardingViewController: UIViewController {
         let view = UIButton()
         view.translatesAutoresizingMaskIntoConstraints = false
         view.setTitle("Next", for: .normal)
-        view.backgroundColor = Colors.onboardingBtnColor
+        view.backgroundColor = Colors1.onboardingBtnColor.color
         view.setTitleColor(.white, for: .normal)
         view.addTarget(self, action: #selector(nextButtonTapped(on:)), for: .touchUpInside)
 
@@ -103,7 +103,7 @@ class OnboardingViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        view.backgroundColor = Colors.mainBgColor
+        view.backgroundColor = Colors1.mainBgColor.color
     }
 
     override func viewWillAppear(_ animated: Bool) {

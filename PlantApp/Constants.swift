@@ -66,22 +66,14 @@ enum Labels {
 
     var label: String {
         switch self {
-        case .identifyPageTitleLabel:
-            return "Identify Plants"
-        case .learnPageTitleLabel:
-            return "Learn Many Plants Species"
-        case .readPageTitleLabel:
-            return "Read Many Articles About Plant"
-        case .loginPageTitleLabel:
-            return  "Hello"
-        case .identifyPageDescription:
-            return "You can identify the plants you don't know through your camera"
-        case .learnPageDescription:
-            return "Let's learn about the many plant species that exist in this world"
-        case .readPageDescription:
-            return "Let's learn more about beautiful plants and read many articles about plants and gardening"
-        case .loginPageDescription:
-            return "Let’s Learn More About Plants"
+            case .identifyPageTitleLabel: return "Identify Plants"
+            case .learnPageTitleLabel: return "Learn Many Plants Species"
+            case .readPageTitleLabel: return "Read Many Articles About Plant"
+            case .loginPageTitleLabel: return  "Hello"
+            case .identifyPageDescription: return "You can identify the plants you don't know through your camera"
+            case .learnPageDescription: return "Let's learn about the many plant species that exist in this world"
+            case .readPageDescription: return "Let's learn more about beautiful plants and read many articles about plants and gardening"
+            case .loginPageDescription: return "Let’s Learn More About Plants"
         }
     }
 }
@@ -91,27 +83,17 @@ enum Colors1 {
     case mainTitleColor
     case onboardingBtnColor
     case mainSubtitleColor
+    case spaciesPagetextColor
 
     var color: UIColor? {
         switch self {
-        case .mainBgColor:
-            return UIColor(named: "main_bg")
-        case .mainTitleColor:
-            return UIColor(named: "main_title_color")
-        case .onboardingBtnColor:
-            return UIColor(named: "onboarding_btn_color")
-        case .mainSubtitleColor:
-            return UIColor(named: "main_subtitle_color")
+            case .mainBgColor: return UIColor(named: "main_bg")
+            case .mainTitleColor: return UIColor(named: "main_title_color")
+            case .onboardingBtnColor: return UIColor(named: "onboarding_btn_color")
+            case .mainSubtitleColor: return UIColor(named: "main_subtitle_color")
+            case .spaciesPagetextColor: return  UIColor(named: "speciesPage_textColor")
         }
     }
-}
-
-struct Colors{
-    static let mainBgColor = UIColor(named: "main_bg")
-    static let mainTitleColor = UIColor(named: "main_title_color")
-    static let onboardingBtnColor = UIColor(named: "onboarding_btn_color")
-    static let mainSubtitleColor = UIColor(named: "main_subtitle_color")
-    static let spaciesPagetextColor = UIColor(named: "speciesPage_textColor")
 }
 
 struct TitleLabels{

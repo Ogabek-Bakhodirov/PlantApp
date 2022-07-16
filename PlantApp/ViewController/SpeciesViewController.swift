@@ -186,7 +186,7 @@ extension SpeciesViewController: UITableViewDelegate, UITableViewDataSource{
         headerView.backgroundColor = .systemGray6
         
         let label = UILabel()
-        label.textColor = Colors.onboardingBtnColor
+        label.textColor = Colors1.onboardingBtnColor.color
         label.font = .systemFont(ofSize: 20, weight: .bold)
         label.text = plantsGroups[section].groupName
         label.frame = CGRect(x: 25, y: 0, width: 20, height: 15)
