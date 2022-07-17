@@ -15,7 +15,7 @@ class SpeciesTableViewCell: UITableViewCell{
         view.translatesAutoresizingMaskIntoConstraints = false
         view.backgroundColor = .clear
         view.contentMode = .left
-        view.textColor = Colors.spaciesPagetextColor
+        view.textColor = Colors.spaciesPagetextColor.color
 
         return view
     }()

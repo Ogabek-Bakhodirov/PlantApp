@@ -44,7 +44,7 @@ class TypePlantsCell: UICollectionViewCell {
     lazy var mainImage: UIImageView = {
         let view = UIImageView()
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.image = Images1.mainPagePlantImage.image
+        view.image = Images.mainPagePlantImage.image
         view.contentMode = .scaleToFill
         
         return view

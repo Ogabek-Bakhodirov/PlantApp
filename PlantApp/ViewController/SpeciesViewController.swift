@@ -7,21 +7,54 @@
 
 import UIKit
 
+struct Plant {
+    var name: String
+    var image: UIImage?
+}
+
+struct PlantGroup {
+    let groupName: String
+    var plants: [Plant] = []
+}
+
+protocol SpeciesLoadProtocol {
+    func loadSpeieces() -> [PlantGroup]
+}
+
+// Loading data from remote/baza/storage
+
+class SpeciesLoader: SpeciesLoadProtocol {
+    func loadSpeieces() -> [PlantGroup] {
+        let alphabet = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y"]
+        var plantsGroups: [PlantGroup] = []
+
+        alphabet.forEach { name in
+            var plantGroup = PlantGroup(groupName: name)
+            let images = [Images.redCactus.image, Images.fatCactus.image, Images.circleCactus.image]
+
+            let plant1 = Plant(name: name + "ABSDFEGD 1", image: images[0])
+            let plant2 = Plant(name: name + "ABSDFEGD 2", image: images[1])
+            let plant3 = Plant(name: name + "ABSDFEGD 3", image: images[2])
+
+            plantGroup.plants = [plant1, plant2, plant3]
+
+            plantsGroups.append(plantGroup)
+        }
+
+        return plantsGroups
+    }
+}
+
 class SpeciesViewController: UIViewController{
-    
-    let alphabet = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y"]
-    
-    let plantName = [
-        ["ACACIA", "ACANTHUS", "ALOE", "AMARANTH", "ARUM"],
-        ["BERGENIA", "BEGONIA", "BEE BALM", "BELLFLOWER", "BALLOON"],
-        ["CACTUS", "CISTUS", "CAESALPENIA", "CINNAMOUM", "CIRSIUM", "CISSUS"],
-        ["DIERAMA", "DIGITALIS", "DAHLIA", "DAPHNE"],
-    ]
+
+    var loader: SpeciesLoadProtocol?
+    var plantsGroups: [PlantGroup] = []
+
     
     lazy var backgroundTopImage: UIImageView = {
         let view = UIImageView()
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.image = Images.speciesPage_bg_img
+        view.image = Images.speciesPage_bg_img.image
         
         return view
     }()
@@ -38,7 +71,7 @@ class SpeciesViewController: UIViewController{
     lazy var speciesMenuButton: UIButton = {
         let view = UIButton()
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.setImage(Images.kebab_menu_img, for: .normal)
+        view.setImage(Images.kebab_menu_img.image, for: .normal)
         
         return view
     }()
@@ -84,8 +117,18 @@ class SpeciesViewController: UIViewController{
         view.backgroundColor = .systemGray6
         
         setupSubviews()
+
+        loadData()
     }
-    
+
+    func loadData() {
+
+        if let loader = loader {
+            plantsGroups = loader.loadSpeieces()
+            speciesTableView.reloadData()
+        }
+    }
+
     func setupSubviews(){
         view.addSubview(backgroundTopImage)
         view.addSubview(speciesBackButton)
@@ -131,6 +174,7 @@ extension SpeciesViewController: UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         let listPlantViewController = ListPlantsViewController()
+        listPlantViewController.plants = plantsGroups[indexPath.section].plants
         listPlantViewController.modalTransitionStyle = .crossDissolve
         listPlantViewController.modalPresentationStyle = .fullScreen
         present(listPlantViewController, animated: true)
@@ -142,9 +186,9 @@ extension SpeciesViewController: UITableViewDelegate, UITableViewDataSource{
         headerView.backgroundColor = .systemGray6
         
         let label = UILabel()
-        label.textColor = Colors.onboardingBtnColor
+        label.textColor = Colors.onboardingBtnColor.color
         label.font = .systemFont(ofSize: 20, weight: .bold)
-        label.text = alphabet[section]
+        label.text = plantsGroups[section].groupName
         label.frame = CGRect(x: 25, y: 0, width: 20, height: 15)
         
         headerView.addSubview(label)
@@ -154,39 +198,31 @@ extension SpeciesViewController: UITableViewDelegate, UITableViewDataSource{
     
     func sectionIndexTitles(for tableView: UITableView) -> [String]? {
         tableView.sectionIndexColor = #colorLiteral(red: 0.4156862745, green: 0.4352941176, blue: 0.4901960784, alpha: 1)
-        return alphabet
+        let plantNames = plantsGroups.map { $0.groupName }
+
+        return plantNames
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return plantName.count
+        return plantsGroups.count
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        plantName[section].count
+        plantsGroups[section].plants.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         guard let cell = tableView.dequeueReusableCell(withIdentifier: SpeciesTableViewCell.identifier) as? SpeciesTableViewCell else { return UITableViewCell() }
         cell.selectionStyle = .none
-        cell.speciesLabel.text = plantName[indexPath.section][indexPath.row]
+        cell.speciesLabel.text = plantsGroups[indexPath.section].plants[indexPath.row].name
         
         return cell
     }
 
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return alphabet[section]
+        return plantsGroups[section].groupName
     }
-//
-//    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-//        let label = UILabel()
-//        label.font = .systemFont(ofSize: 30.0, weight: .bold)
-//        label.textColor = Colors.onboardingBtnColor
-//        label.text = alphabet[section]
-//        label.textAlignment = .left
-//
-//        return view
-//    }
 }
 
 extension UITextField {

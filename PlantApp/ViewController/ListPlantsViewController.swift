@@ -8,14 +8,12 @@
 import UIKit
 
 class ListPlantsViewController: UIViewController{
-    
-    let plantImages = [Images.redCactus, Images.fatCactus, Images.circleCactus]
-    let plantNames = ["Red Cactus", "Fat Cactus", "Circle Cactus"]
-        
+    var plants: [Plant] = []
+
     lazy var backgroundTopImage: UIImageView = {
         let view = UIImageView()
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.image = Images.listPlantsBackground
+        view.image = Images.listPlantsBackground.image
         
         return view
     }()
@@ -33,7 +31,7 @@ class ListPlantsViewController: UIViewController{
     lazy var speciesMenuButton: UIButton = {
         let view = UIButton()
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.setImage(Images.kebab_menu_img, for: .normal)
+        view.setImage(Images.kebab_menu_img.image, for: .normal)
         
         return view
     }()
@@ -131,15 +129,16 @@ extension ListPlantsViewController: UITableViewDelegate, UITableViewDataSource{
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "listPlantsTableViewCell") as? ListPlantsTableViewCell else { return UITableViewCell() }
         
         cell.backgroundColor = .systemGray6
-        cell.plantImage.image = plantImages[indexPath.row]
-        cell.plantName.text = plantNames[indexPath.row]
+//        cell.plantImage.image = plantImages[indexPath.row]
+        cell.plantImage.image = plants[indexPath.row].image
+        cell.plantName.text = plants[indexPath.row].name
         
         return cell
     }
     
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        plantImages.count
+        plants.count
     }
     
 }
