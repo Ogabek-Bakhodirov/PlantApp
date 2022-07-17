@@ -128,8 +128,8 @@ class MainViewController: UIViewController {
 extension MainViewController: UICollectionViewDelegate , UICollectionViewDataSource {
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 4
-        
     }
+
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if section == 0 {
             return 1
@@ -247,9 +247,6 @@ class Header: UICollectionReusableView {
             label.rightAnchor.constraint(equalTo: self.rightAnchor),
             label.bottomAnchor.constraint(equalTo: self.bottomAnchor),
         ])
-        
     }
-    
-    
 }
 

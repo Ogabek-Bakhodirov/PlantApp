@@ -17,13 +17,9 @@ struct PlantGroup {
     var plants: [Plant] = []
 }
 
-protocol SpeciesLoadProtocol {
-    func loadSpeieces() -> [PlantGroup]
-}
-
 // Loading data from remote/baza/storage
 
-class SpeciesLoader: SpeciesLoadProtocol {
+class SpeciesLoader {
     func loadSpeieces() -> [PlantGroup] {
         let alphabet = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y"]
         var plantsGroups: [PlantGroup] = []
@@ -45,9 +41,10 @@ class SpeciesLoader: SpeciesLoadProtocol {
     }
 }
 
-class SpeciesViewController: UIViewController{
 
-    var loader: SpeciesLoadProtocol?
+
+class SpeciesViewController: UIViewController{
+    var loader: SpeciesLoader?
     var plantsGroups: [PlantGroup] = []
 
     
@@ -127,6 +124,8 @@ class SpeciesViewController: UIViewController{
             plantsGroups = loader.loadSpeieces()
             speciesTableView.reloadData()
         }
+
+        speciesTableView.reloadData()
     }
 
     func setupSubviews(){
