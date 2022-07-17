@@ -277,12 +277,11 @@ class LoginPageViewController2: UIViewController {
     
     @objc func loginButtonTapped() {
         if nameTextField.text != "" && passwordTextField.text != ""  && checkbox.currentImage != nil {
-            let vc = MainViewController()
-            vc.modalTransitionStyle = .flipHorizontal
-            vc.modalPresentationStyle = .fullScreen
-            let mainCell = MainCell()
-            mainCell.nameLabel.text = "Hello \(nameTextField.text!)" 
-            present(vc, animated: true)
+            let controller = TabbarController()
+            controller.modalTransitionStyle = .flipHorizontal
+            controller.modalPresentationStyle = .fullScreen
+
+            present(controller, animated: true)
         } else {
             showAlert()
         }
