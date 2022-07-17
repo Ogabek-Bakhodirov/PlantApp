@@ -22,7 +22,6 @@
 		6EA7F9062881C83500EA6186 /* LoginPageViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EA7F9052881C83500EA6186 /* LoginPageViewController2.swift */; };
 		6EA7F9082881C84700EA6186 /* ButtonsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EA7F9072881C84700EA6186 /* ButtonsCell.swift */; };
 		6ECF957428844FED00A4E9F6 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ECF957328844FED00A4E9F6 /* OnboardingView.swift */; };
-		6ECF9578288450EE00A4E9F6 /* TabbarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ECF9577288450EE00A4E9F6 /* TabbarController.swift */; };
 		6ECF957B288457AD00A4E9F6 /* SETabView in Frameworks */ = {isa = PBXBuildFile; productRef = 6ECF957A288457AD00A4E9F6 /* SETabView */; };
 		6EEA108928832DDD00026F09 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EEA108828832DDD00026F09 /* CustomTextField.swift */; };
 		6EEA108B288333A000026F09 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EEA108A288333A000026F09 /* TestViewController.swift */; };
@@ -53,7 +52,6 @@
 		6EA7F9072881C84700EA6186 /* ButtonsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonsCell.swift; sourceTree = "<group>"; };
 		6EA7F90D2881D04E00EA6186 /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyPlayground.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		6ECF957328844FED00A4E9F6 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
-		6ECF9577288450EE00A4E9F6 /* TabbarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TabbarController.swift; path = ../../../../../ios/course/PlantApp/PlantApp/ViewController/TabbarController.swift; sourceTree = "<group>"; };
 		6EEA108828832DDD00026F09 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		6EEA108A288333A000026F09 /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
 		80AC9F6B28757284006BC246 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -127,7 +125,6 @@
 				80AC9F9728788FD8006BC246 /* SpeciesViewController.swift */,
 				80AC9F9B287A1D06006BC246 /* ListPlantsViewController.swift */,
 				6EEA108A288333A000026F09 /* TestViewController.swift */,
-				6ECF9577288450EE00A4E9F6 /* TabbarController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -242,7 +239,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				80AC9F9A2878B2DE006BC246 /* SpeciesTableViewCell.swift in Sources */,
-				6ECF9578288450EE00A4E9F6 /* TabbarController.swift in Sources */,
 				6EEA108B288333A000026F09 /* TestViewController.swift in Sources */,
 				2C1A86E228749AF4009600F9 /* OnboardingViewController.swift in Sources */,
 				185B52C42882439F00F0ABF6 /* DetailArticles.swift in Sources */,
