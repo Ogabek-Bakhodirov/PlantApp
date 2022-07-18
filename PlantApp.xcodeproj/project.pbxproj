@@ -20,12 +20,14 @@
 		2CDF1DB72874960B00F0BC12 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2CDF1DB52874960B00F0BC12 /* LaunchScreen.storyboard */; };
 		6EA7F8FA2881C7FF00EA6186 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EA7F8F92881C7FF00EA6186 /* MainViewController.swift */; };
 		6EA7F9002881C82700EA6186 /* TypePlantsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EA7F8FB2881C82700EA6186 /* TypePlantsCell.swift */; };
-		6EA7F9012881C82700EA6186 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EA7F8FC2881C82700EA6186 /* TabBarController.swift */; };
 		6EA7F9022881C82700EA6186 /* PhotoPlantsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EA7F8FD2881C82700EA6186 /* PhotoPlantsCell.swift */; };
 		6EA7F9032881C82700EA6186 /* MainCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EA7F8FE2881C82700EA6186 /* MainCell.swift */; };
 		6EA7F9042881C82700EA6186 /* Tabbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EA7F8FF2881C82700EA6186 /* Tabbar.swift */; };
 		6EA7F9062881C83500EA6186 /* LoginPageViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EA7F9052881C83500EA6186 /* LoginPageViewController2.swift */; };
 		6EA7F9082881C84700EA6186 /* ButtonsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EA7F9072881C84700EA6186 /* ButtonsCell.swift */; };
+		6ECF957428844FED00A4E9F6 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ECF957328844FED00A4E9F6 /* OnboardingView.swift */; };
+		6ECF957B288457AD00A4E9F6 /* SETabView in Frameworks */ = {isa = PBXBuildFile; productRef = 6ECF957A288457AD00A4E9F6 /* SETabView */; };
+		6ECF957D2884597E00A4E9F6 /* TabbarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ECF957C2884597E00A4E9F6 /* TabbarController.swift */; };
 		6EEA108928832DDD00026F09 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EEA108828832DDD00026F09 /* CustomTextField.swift */; };
 		6EEA108B288333A000026F09 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EEA108A288333A000026F09 /* TestViewController.swift */; };
 		80AC9F6C28757284006BC246 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80AC9F6B28757284006BC246 /* Constants.swift */; };
@@ -52,13 +54,14 @@
 		2CDF1DB82874960B00F0BC12 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6EA7F8F92881C7FF00EA6186 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		6EA7F8FB2881C82700EA6186 /* TypePlantsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TypePlantsCell.swift; sourceTree = "<group>"; };
-		6EA7F8FC2881C82700EA6186 /* TabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		6EA7F8FD2881C82700EA6186 /* PhotoPlantsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoPlantsCell.swift; sourceTree = "<group>"; };
 		6EA7F8FE2881C82700EA6186 /* MainCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainCell.swift; sourceTree = "<group>"; };
 		6EA7F8FF2881C82700EA6186 /* Tabbar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tabbar.swift; sourceTree = "<group>"; };
 		6EA7F9052881C83500EA6186 /* LoginPageViewController2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginPageViewController2.swift; sourceTree = "<group>"; };
 		6EA7F9072881C84700EA6186 /* ButtonsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonsCell.swift; sourceTree = "<group>"; };
 		6EA7F90D2881D04E00EA6186 /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyPlayground.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		6ECF957328844FED00A4E9F6 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		6ECF957C2884597E00A4E9F6 /* TabbarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TabbarController.swift; path = ../../../../../ios/course/PlantApp/PlantApp/ViewController/TabbarController.swift; sourceTree = "<group>"; };
 		6EEA108828832DDD00026F09 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		6EEA108A288333A000026F09 /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
 		80AC9F6B28757284006BC246 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -74,6 +77,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6ECF957B288457AD00A4E9F6 /* SETabView in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -128,10 +132,10 @@
 				6EA7F8F92881C7FF00EA6186 /* MainViewController.swift */,
 				2C1A86E128749AF4009600F9 /* OnboardingViewController.swift */,
 				18A906D128758C150043E67D /* FirstScreenViewController.swift */,
-				6EA7F8FC2881C82700EA6186 /* TabBarController.swift */,
 				6EA7F9052881C83500EA6186 /* LoginPageViewController2.swift */,
 				80AC9F9728788FD8006BC246 /* SpeciesViewController.swift */,
 				80AC9F9B287A1D06006BC246 /* ListPlantsViewController.swift */,
+				6ECF957C2884597E00A4E9F6 /* TabbarController.swift */,
 				6EEA108A288333A000026F09 /* TestViewController.swift */,
 			);
 			path = ViewController;
@@ -140,6 +144,7 @@
 		6EEA1086288323E000026F09 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				6ECF957328844FED00A4E9F6 /* OnboardingView.swift */,
 				6EA7F8FF2881C82700EA6186 /* Tabbar.swift */,
 				80AC9F9528774687006BC246 /* ContentButton.swift */,
 				185B52C52882476F00F0ABF6 /* DetailArticlesCollectionViewCell.swift */,
@@ -188,6 +193,9 @@
 			dependencies = (
 			);
 			name = PlantApp;
+			packageProductDependencies = (
+				6ECF957A288457AD00A4E9F6 /* SETabView */,
+			);
 			productName = PlantApp;
 			productReference = 2CDF1DA72874960900F0BC12 /* PlantApp.app */;
 			productType = "com.apple.product-type.application";
@@ -216,6 +224,9 @@
 				Base,
 			);
 			mainGroup = 2CDF1D9E2874960900F0BC12;
+			packageReferences = (
+				6ECF9579288457AD00A4E9F6 /* XCRemoteSwiftPackageReference "SETabView" */,
+			);
 			productRefGroup = 2CDF1DA82874960900F0BC12 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -243,12 +254,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				80AC9F9A2878B2DE006BC246 /* SpeciesTableViewCell.swift in Sources */,
-				6EA7F9012881C82700EA6186 /* TabBarController.swift in Sources */,
 				6EEA108B288333A000026F09 /* TestViewController.swift in Sources */,
 				2C1A86E228749AF4009600F9 /* OnboardingViewController.swift in Sources */,
 				185B52C42882439F00F0ABF6 /* DetailArticles.swift in Sources */,
 				80AC9F9C287A1D06006BC246 /* ListPlantsViewController.swift in Sources */,
 				80AC9F9C287A1D06006BC246 /* ListPlantsViewController.swift in Sources */,
+				6ECF957D2884597E00A4E9F6 /* TabbarController.swift in Sources */,
 				6EA7F9082881C84700EA6186 /* ButtonsCell.swift in Sources */,
 				18A906D228758C150043E67D /* FirstScreenViewController.swift in Sources */,
 				6EA7F9032881C82700EA6186 /* MainCell.swift in Sources */,
@@ -267,6 +278,7 @@
 				6EA7F9022881C82700EA6186 /* PhotoPlantsCell.swift in Sources */,
 				80AC9F9828788FD8006BC246 /* SpeciesViewController.swift in Sources */,
 				185B52C62882476F00F0ABF6 /* DetailArticlesCollectionViewCell.swift in Sources */,
+				6ECF957428844FED00A4E9F6 /* OnboardingView.swift in Sources */,
 				80AC9F6C28757284006BC246 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -477,6 +489,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		6ECF9579288457AD00A4E9F6 /* XCRemoteSwiftPackageReference "SETabView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/eshwavin/SETabView.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		6ECF957A288457AD00A4E9F6 /* SETabView */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6ECF9579288457AD00A4E9F6 /* XCRemoteSwiftPackageReference "SETabView" */;
+			productName = SETabView;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 2CDF1D9F2874960900F0BC12 /* Project object */;
 }

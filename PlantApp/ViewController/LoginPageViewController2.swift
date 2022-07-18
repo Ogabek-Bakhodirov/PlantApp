@@ -7,6 +7,11 @@
 
 import UIKit
 
+struct User {
+    var name: String
+    var password: String
+}
+
 class LoginPageViewController2: UIViewController {
     
     private lazy var backButton: UIButton = {
@@ -276,13 +281,14 @@ class LoginPageViewController2: UIViewController {
     }
     
     @objc func loginButtonTapped() {
-        if nameTextField.text != "" && passwordTextField.text != ""  && checkbox.currentImage != nil {
-            let vc = MainViewController()
-            vc.modalTransitionStyle = .flipHorizontal
-            vc.modalPresentationStyle = .fullScreen
-            let mainCell = MainCell()
-            mainCell.nameLabel.text = "Hello \(nameTextField.text!)" 
-            present(vc, animated: true)
+        if let name = nameTextField.text, !name.isEmpty, let password = passwordTextField.text, !password.isEmpty {
+            let user = User(name: name, password: password)
+            UserDefaults.standard.set(user.name, forKey: "USER_NAME")
+            UserDefaults.standard.set(user.password, forKey: "USER_PASSWORD")
+            UserDefaults.standard.set(true, forKey: "IS_USER_LOGIN")
+
+            let controller = TabbarController()
+            navigationController?.pushViewController(controller, animated: true)
         } else {
             showAlert()
         }
