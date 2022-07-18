@@ -8,11 +8,14 @@
 import UIKit
 
 class MainViewController: UIViewController {
-    
+    var name: String {
+        return UserDefaults.standard.string(forKey: "USER_NAME") ?? ""
+    }
+
     lazy var mainLabel: UILabel = {
         var view = UILabel()
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.text =  "hello bro"
+        view.text =  "hello \(name)"
         view.textColor = Colors.mainTitleColor.color
         view.font = UIFont(name: "'SF Pro Text'", size: 30.0)
         view.font = .systemFont(ofSize: 30.0, weight: .bold)
@@ -150,6 +153,7 @@ extension MainViewController: UICollectionViewDelegate , UICollectionViewDataSou
                 break
             case 1:
                 let vc = SpeciesViewController()
+                vc.loader = SpeciesLoader()
                 vc.modalTransitionStyle = .flipHorizontal
                 vc.modalPresentationStyle = .fullScreen
                 present(vc, animated: true)

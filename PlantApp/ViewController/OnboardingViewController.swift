@@ -63,9 +63,7 @@ class OnboardingViewController: UIViewController {
 
     private func openLoginPageViewController() {
         let signUpViewController = LoginPageViewController2()
-        signUpViewController.modalTransitionStyle = .crossDissolve
-        signUpViewController.modalPresentationStyle = .fullScreen
-        present(signUpViewController, animated: true)
+        navigationController?.pushViewController(signUpViewController, animated: true)
     }
     
     private func changeMainPageElements(){
