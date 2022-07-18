@@ -8,11 +8,14 @@
 import UIKit
 
 class MainCell: UICollectionViewCell {
-    
+    var name: String {
+        return UserDefaults.standard.string(forKey: "USER_NAME") ?? ""
+    }
+
   lazy var nameLabel: UILabel = {
         let view = UILabel()
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.text = "Hello"
+        view.text = "Hello \(name)"
         view.font = .monospacedSystemFont(ofSize: 21, weight: .bold)
         view.textColor = .white
         view.setContentHuggingPriority(.defaultHigh, for: .vertical)
