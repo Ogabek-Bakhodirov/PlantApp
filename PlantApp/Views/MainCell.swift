@@ -59,14 +59,16 @@ class MainCell: UICollectionViewCell {
         view.layer.cornerRadius = 15
         return view
     }()
-    lazy var searchBar: UISearchBar = {
-        let view = UISearchBar()
+    lazy var searchBar: UITextField = {
+       let view = UITextField()
+      let paddingView: UIView = UIView(frame: CGRect(x: 0, y: 0, width: 20, height: 20))
+        view.leftViewMode = .always
+        view.leftView = paddingView
         view.translatesAutoresizingMaskIntoConstraints = false
         view.placeholder = "Search For Plants "
-        view.searchTextField.textColor = .black
-        view.searchTextField.font = .monospacedSystemFont(ofSize: 14, weight: .regular)
-        view.barTintColor = .white
-        view.searchTextField.backgroundColor = .white
+        view.textColor = .black
+        view.font = .monospacedSystemFont(ofSize: 14, weight: .regular)
+        view.backgroundColor = .white
         view.layer.cornerRadius = 25
         view.layer.masksToBounds = true
         
@@ -105,7 +107,7 @@ class MainCell: UICollectionViewCell {
             
             searchBar.leftAnchor.constraint(equalTo: self.leftAnchor,constant: 23),
             searchBar.rightAnchor.constraint(equalTo: self.rightAnchor,constant: -23),
-            searchBar.bottomAnchor.constraint(equalTo: self.bottomAnchor),
+            searchBar.bottomAnchor.constraint(equalTo: self.bottomAnchor ,constant: 5),
             searchBar.heightAnchor.constraint(equalToConstant: 50)
             
             

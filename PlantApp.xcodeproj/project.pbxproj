@@ -10,6 +10,10 @@
 		185B52C42882439F00F0ABF6 /* DetailArticles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185B52C32882439F00F0ABF6 /* DetailArticles.swift */; };
 		185B52C62882476F00F0ABF6 /* DetailArticlesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185B52C52882476F00F0ABF6 /* DetailArticlesCollectionViewCell.swift */; };
 		18A906D228758C150043E67D /* FirstScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A906D128758C150043E67D /* FirstScreenViewController.swift */; };
+		18FE06292885E8A300998E37 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FE06282885E8A300998E37 /* ProfileViewController.swift */; };
+		18FE062D2885E8B900998E37 /* ProfileCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FE062A2885E8B900998E37 /* ProfileCollectionViewCell.swift */; };
+		18FE062E2885E8B900998E37 /* ProfilePhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FE062B2885E8B900998E37 /* ProfilePhotoCell.swift */; };
+		18FE062F2885E8B900998E37 /* ProfileCell2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FE062C2885E8B900998E37 /* ProfileCell2.swift */; };
 		2C1A86E228749AF4009600F9 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C1A86E128749AF4009600F9 /* OnboardingViewController.swift */; };
 		2CDF1DAB2874960900F0BC12 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CDF1DAA2874960900F0BC12 /* AppDelegate.swift */; };
 		2CDF1DB42874960B00F0BC12 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2CDF1DB32874960B00F0BC12 /* Assets.xcassets */; };
@@ -23,7 +27,6 @@
 		6EA7F9082881C84700EA6186 /* ButtonsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EA7F9072881C84700EA6186 /* ButtonsCell.swift */; };
 		6ECF957428844FED00A4E9F6 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ECF957328844FED00A4E9F6 /* OnboardingView.swift */; };
 		6ECF957B288457AD00A4E9F6 /* SETabView in Frameworks */ = {isa = PBXBuildFile; productRef = 6ECF957A288457AD00A4E9F6 /* SETabView */; };
-		6ECF957D2884597E00A4E9F6 /* TabbarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ECF957C2884597E00A4E9F6 /* TabbarController.swift */; };
 		6EEA108928832DDD00026F09 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EEA108828832DDD00026F09 /* CustomTextField.swift */; };
 		6EEA108B288333A000026F09 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EEA108A288333A000026F09 /* TestViewController.swift */; };
 		80AC9F6C28757284006BC246 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80AC9F6B28757284006BC246 /* Constants.swift */; };
@@ -32,12 +35,17 @@
 		80AC9F9A2878B2DE006BC246 /* SpeciesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80AC9F992878B2DE006BC246 /* SpeciesTableViewCell.swift */; };
 		80AC9F9C287A1D06006BC246 /* ListPlantsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80AC9F9B287A1D06006BC246 /* ListPlantsViewController.swift */; };
 		80AC9FA22880BA91006BC246 /* ListPlantsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80AC9FA12880BA91006BC246 /* ListPlantsTableViewCell.swift */; };
+		CE877763288676F300A3E098 /* TabbarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE877762288676F300A3E098 /* TabbarController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		185B52C32882439F00F0ABF6 /* DetailArticles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailArticles.swift; sourceTree = "<group>"; };
 		185B52C52882476F00F0ABF6 /* DetailArticlesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailArticlesCollectionViewCell.swift; sourceTree = "<group>"; };
 		18A906D128758C150043E67D /* FirstScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstScreenViewController.swift; sourceTree = "<group>"; };
+		18FE06282885E8A300998E37 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		18FE062A2885E8B900998E37 /* ProfileCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileCollectionViewCell.swift; sourceTree = "<group>"; };
+		18FE062B2885E8B900998E37 /* ProfilePhotoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfilePhotoCell.swift; sourceTree = "<group>"; };
+		18FE062C2885E8B900998E37 /* ProfileCell2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileCell2.swift; sourceTree = "<group>"; };
 		2C1A86E128749AF4009600F9 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		2CDF1DA72874960900F0BC12 /* PlantApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlantApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CDF1DAA2874960900F0BC12 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -53,7 +61,6 @@
 		6EA7F9072881C84700EA6186 /* ButtonsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonsCell.swift; sourceTree = "<group>"; };
 		6EA7F90D2881D04E00EA6186 /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyPlayground.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		6ECF957328844FED00A4E9F6 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
-		6ECF957C2884597E00A4E9F6 /* TabbarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TabbarController.swift; path = ../../../../../ios/course/PlantApp/PlantApp/ViewController/TabbarController.swift; sourceTree = "<group>"; };
 		6EEA108828832DDD00026F09 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		6EEA108A288333A000026F09 /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
 		80AC9F6B28757284006BC246 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -62,6 +69,7 @@
 		80AC9F992878B2DE006BC246 /* SpeciesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeciesTableViewCell.swift; sourceTree = "<group>"; };
 		80AC9F9B287A1D06006BC246 /* ListPlantsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListPlantsViewController.swift; sourceTree = "<group>"; };
 		80AC9FA12880BA91006BC246 /* ListPlantsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListPlantsTableViewCell.swift; sourceTree = "<group>"; };
+		CE877762288676F300A3E098 /* TabbarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +127,7 @@
 		6EEA10852883238700026F09 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				18FE06282885E8A300998E37 /* ProfileViewController.swift */,
 				185B52C32882439F00F0ABF6 /* DetailArticles.swift */,
 				6EA7F8F92881C7FF00EA6186 /* MainViewController.swift */,
 				2C1A86E128749AF4009600F9 /* OnboardingViewController.swift */,
@@ -126,7 +135,9 @@
 				6EA7F9052881C83500EA6186 /* LoginPageViewController2.swift */,
 				80AC9F9728788FD8006BC246 /* SpeciesViewController.swift */,
 				80AC9F9B287A1D06006BC246 /* ListPlantsViewController.swift */,
-				6ECF957C2884597E00A4E9F6 /* TabbarController.swift */,
+
+				CE877762288676F300A3E098 /* TabbarController.swift */,
+
 				6EEA108A288333A000026F09 /* TestViewController.swift */,
 			);
 			path = ViewController;
@@ -139,6 +150,9 @@
 				6EA7F8FF2881C82700EA6186 /* Tabbar.swift */,
 				80AC9F9528774687006BC246 /* ContentButton.swift */,
 				185B52C52882476F00F0ABF6 /* DetailArticlesCollectionViewCell.swift */,
+				18FE062C2885E8B900998E37 /* ProfileCell2.swift */,
+				18FE062A2885E8B900998E37 /* ProfileCollectionViewCell.swift */,
+				18FE062B2885E8B900998E37 /* ProfilePhotoCell.swift */,
 				80AC9FA12880BA91006BC246 /* ListPlantsTableViewCell.swift */,
 				6EA7F8FE2881C82700EA6186 /* MainCell.swift */,
 				80AC9F992878B2DE006BC246 /* SpeciesTableViewCell.swift */,
@@ -247,17 +261,21 @@
 				185B52C42882439F00F0ABF6 /* DetailArticles.swift in Sources */,
 				80AC9F9C287A1D06006BC246 /* ListPlantsViewController.swift in Sources */,
 				80AC9F9C287A1D06006BC246 /* ListPlantsViewController.swift in Sources */,
-				6ECF957D2884597E00A4E9F6 /* TabbarController.swift in Sources */,
 				6EA7F9082881C84700EA6186 /* ButtonsCell.swift in Sources */,
+				CE877763288676F300A3E098 /* TabbarController.swift in Sources */,
 				18A906D228758C150043E67D /* FirstScreenViewController.swift in Sources */,
 				6EA7F9032881C82700EA6186 /* MainCell.swift in Sources */,
+				18FE062D2885E8B900998E37 /* ProfileCollectionViewCell.swift in Sources */,
 				6EA7F8FA2881C7FF00EA6186 /* MainViewController.swift in Sources */,
 				2CDF1DAB2874960900F0BC12 /* AppDelegate.swift in Sources */,
 				6EA7F9042881C82700EA6186 /* Tabbar.swift in Sources */,
 				6EA7F9062881C83500EA6186 /* LoginPageViewController2.swift in Sources */,
 				80AC9FA22880BA91006BC246 /* ListPlantsTableViewCell.swift in Sources */,
+				18FE06292885E8A300998E37 /* ProfileViewController.swift in Sources */,
 				6EEA108928832DDD00026F09 /* CustomTextField.swift in Sources */,
+				18FE062E2885E8B900998E37 /* ProfilePhotoCell.swift in Sources */,
 				80AC9F9628774687006BC246 /* ContentButton.swift in Sources */,
+				18FE062F2885E8B900998E37 /* ProfileCell2.swift in Sources */,
 				6EA7F9002881C82700EA6186 /* TypePlantsCell.swift in Sources */,
 				6EA7F9022881C82700EA6186 /* PhotoPlantsCell.swift in Sources */,
 				80AC9F9828788FD8006BC246 /* SpeciesViewController.swift in Sources */,
@@ -402,20 +420,21 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 8T58FH89LR;
+				DEVELOPMENT_TEAM = PFJ2D3242U;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PlantApp/Utils/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = elyahk.PlantApp;
+				PRODUCT_BUNDLE_IDENTIFIER = "Bekzod-Qahhorov.PlantApp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -430,20 +449,21 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 8T58FH89LR;
+				DEVELOPMENT_TEAM = PFJ2D3242U;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PlantApp/Utils/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = elyahk.PlantApp;
+				PRODUCT_BUNDLE_IDENTIFIER = "Bekzod-Qahhorov.PlantApp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
