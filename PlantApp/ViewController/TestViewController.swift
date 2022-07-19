@@ -12,7 +12,7 @@ class TestViewController: UIViewController {
         let view = CustomTextField(frame: .zero)
         view.lengthCount = 1
         view.translatesAutoresizingMaskIntoConstraints = false
-
+        view.lengthCount
         return view
     }()
 

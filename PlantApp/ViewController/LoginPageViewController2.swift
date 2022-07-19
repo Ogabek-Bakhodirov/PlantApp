@@ -85,7 +85,7 @@ class LoginPageViewController2: UIViewController {
     private lazy var nameTextField: UITextField = {
         var view = UITextField()
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.placeholder = "Username"
+        view.placeholder = "Username1"
 //        view.placeholderFont = .systemFont(ofSize: 14)
         view.textColor = Colors.mainTitleColor.color
 //        view.selectedTitleColor = Colors1.onboardingBtnColor.color!
@@ -287,7 +287,7 @@ class LoginPageViewController2: UIViewController {
             UserDefaults.standard.set(user.password, forKey: "USER_PASSWORD")
             UserDefaults.standard.set(true, forKey: "IS_USER_LOGIN")
 
-            let controller = TabbarController()
+            let controller = tabBarController()
             navigationController?.pushViewController(controller, animated: true)
         } else {
             showAlert()
