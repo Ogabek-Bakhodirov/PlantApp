@@ -10,8 +10,9 @@ import UIKit
 class CustomTextField: UIView {
     var title = "Username"
     var lengthCount: Int = 6
-
-    private lazy var titleLabel : UILabel = {
+   lazy var text = textField.text
+    
+     lazy var titleLabel : UILabel = {
         let view = UILabel()
         view.translatesAutoresizingMaskIntoConstraints = false
         view.text = title
@@ -25,11 +26,11 @@ class CustomTextField: UIView {
         return view
     }()
 
-    private lazy var textField: UITextField = {
+     lazy var textField: UITextField = {
         let view = UITextField()
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.text = "Taylor Swift"
-        view.font = UIFont.systemFont(ofSize: 17.0, weight: .medium)
+        view.text = ""
+        view.font = UIFont.systemFont(ofSize: 17.0, weight: .bold)
         view.textColor = .black
         view.delegate = self
         view.attributedPlaceholder = placeHolderAttributesString
@@ -37,7 +38,7 @@ class CustomTextField: UIView {
         return view
     }()
 
-    private lazy var lineView: UIView = {
+     lazy var lineView: UIView = {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
         view.backgroundColor = .systemGray2
@@ -127,11 +128,12 @@ extension CustomTextField: UITextFieldDelegate {
 
     private func validate(with string: String) {
         if string.count > lengthCount {
+            
             lineView.backgroundColor = .green
             iconImageView.image = Images.ic_check_green.image
         } else {
             lineView.backgroundColor = .systemGray2
-            iconImageView.image = Images.learnPageImage.image
+            iconImageView.image = nil
         }
     }
 }

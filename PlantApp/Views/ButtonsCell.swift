@@ -37,7 +37,7 @@ class ButtonsCell: UICollectionViewCell {
         let view = UILabel()
         view.translatesAutoresizingMaskIntoConstraints = false
         view.text = "Identify"
-        view.font = UIFont.boldSystemFont(ofSize: 16)
+        view.font = UIFont.boldSystemFont(ofSize: 12)
         view.textColor = .white
         return view
     }()
@@ -71,13 +71,13 @@ class ButtonsCell: UICollectionViewCell {
             buttonView.leftAnchor.constraint(equalTo: self.leftAnchor),
             buttonView.rightAnchor.constraint(equalTo: self.rightAnchor),
             buttonView.bottomAnchor.constraint(equalTo: self.bottomAnchor),
-            buttonLabel.bottomAnchor.constraint(equalTo: buttonView.bottomAnchor, constant: -10),
+            buttonLabel.topAnchor.constraint(equalTo: buttonImage.bottomAnchor, constant: 5),
             buttonLabel.centerXAnchor.constraint(equalTo: buttonView.centerXAnchor),
             
-            buttonImage.topAnchor.constraint(equalTo: buttonView.topAnchor, constant: 10),
+            buttonImage.topAnchor.constraint(equalTo: buttonView.topAnchor, constant: 19),
             buttonImage.centerXAnchor.constraint(equalTo: buttonView.centerXAnchor),
-            buttonImage.heightAnchor.constraint(equalToConstant: 25),
-            buttonImage.widthAnchor.constraint(equalToConstant: 30),
+            buttonImage.heightAnchor.constraint(equalToConstant: 22),
+            buttonImage.widthAnchor.constraint(equalToConstant: 22),
             
             button.topAnchor.constraint(equalTo: buttonView.topAnchor),
             button.leftAnchor.constraint(equalTo: buttonView.leftAnchor),

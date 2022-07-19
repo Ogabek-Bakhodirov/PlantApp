@@ -1,14 +1,16 @@
 {
-  "pins" : [
-    {
-      "identity" : "setabview",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/eshwavin/SETabView.git",
-      "state" : {
-        "revision" : "a4605f2c5328c3603fc6c4bf5197e1e6eda0013b",
-        "version" : "2.0.0"
+  "object": {
+    "pins": [
+      {
+        "package": "SETabView",
+        "repositoryURL": "https://github.com/eshwavin/SETabView.git",
+        "state": {
+          "branch": null,
+          "revision": "a4605f2c5328c3603fc6c4bf5197e1e6eda0013b",
+          "version": "2.0.0"
+        }
       }
-    }
-  ],
-  "version" : 2
+    ]
+  },
+  "version": 1
 }

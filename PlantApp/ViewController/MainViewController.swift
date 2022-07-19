@@ -34,13 +34,13 @@ class MainViewController: UIViewController {
         view.register(Header.self, forSupplementaryViewOfKind: "firstHeaderId", withReuseIdentifier: "Header")
         view.register(TypePlantsCell.self,forCellWithReuseIdentifier: "TypePlantsCell")
         view.register(PhotoPlantsCell.self,forCellWithReuseIdentifier: "PhotoPlantsCell")
+        view.backgroundColor = .systemGray6
         return view
     }()
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .red
         
         setupSubViews()
     }
@@ -185,6 +185,13 @@ extension MainViewController: UICollectionViewDelegate , UICollectionViewDataSou
         } else if indexPath.section == 1 {
             guard let cell = contectCollectionView.dequeueReusableCell(withReuseIdentifier:"ButtonsCell" , for: indexPath) as? ButtonsCell else {
                 return UICollectionViewCell()
+            }
+            if indexPath.row > 0 {
+                cell.buttonView.backgroundColor = .white
+                cell.buttonImage.tintColor = Colors.onboardingBtnColor.color
+                cell.buttonLabel.textColor = Colors.onboardingBtnColor.color
+                cell.buttonView.layer.shadowColor = #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)
+                cell.buttonView.layer.shadowOpacity = 1
             }
             return cell
         } else if indexPath.section == 3 {

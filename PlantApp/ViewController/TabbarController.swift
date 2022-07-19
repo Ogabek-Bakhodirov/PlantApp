@@ -1,9 +1,8 @@
 //
-//  File.swift
+//  TabbarController.swift
 //  PlantApp
 //
-//  Created by eldorbek nusratov on 17/07/22.
-//
+//  Created by Bekzod Qahhorov on 19/07/22.
 
 import SETabView
 import UIKit
