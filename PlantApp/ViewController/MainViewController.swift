@@ -186,6 +186,10 @@ extension MainViewController: UICollectionViewDelegate , UICollectionViewDataSou
             guard let cell = contectCollectionView.dequeueReusableCell(withReuseIdentifier:"ButtonsCell" , for: indexPath) as? ButtonsCell else {
                 return UICollectionViewCell()
             }
+            if indexPath.item > 0 {
+                cell.backgroundColor = .white
+                
+            }
             return cell
         } else if indexPath.section == 3 {
             guard let cell = contectCollectionView.dequeueReusableCell(withReuseIdentifier:"PhotoPlantsCell" , for: indexPath) as? PhotoPlantsCell else {

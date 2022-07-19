@@ -35,6 +35,7 @@
 		80AC9F9A2878B2DE006BC246 /* SpeciesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80AC9F992878B2DE006BC246 /* SpeciesTableViewCell.swift */; };
 		80AC9F9C287A1D06006BC246 /* ListPlantsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80AC9F9B287A1D06006BC246 /* ListPlantsViewController.swift */; };
 		80AC9FA22880BA91006BC246 /* ListPlantsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80AC9FA12880BA91006BC246 /* ListPlantsTableViewCell.swift */; };
+		CE877763288676F300A3E098 /* TabbarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE877762288676F300A3E098 /* TabbarController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -68,6 +69,7 @@
 		80AC9F992878B2DE006BC246 /* SpeciesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeciesTableViewCell.swift; sourceTree = "<group>"; };
 		80AC9F9B287A1D06006BC246 /* ListPlantsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListPlantsViewController.swift; sourceTree = "<group>"; };
 		80AC9FA12880BA91006BC246 /* ListPlantsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListPlantsTableViewCell.swift; sourceTree = "<group>"; };
+		CE877762288676F300A3E098 /* TabbarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,6 +135,9 @@
 				6EA7F9052881C83500EA6186 /* LoginPageViewController2.swift */,
 				80AC9F9728788FD8006BC246 /* SpeciesViewController.swift */,
 				80AC9F9B287A1D06006BC246 /* ListPlantsViewController.swift */,
+
+				CE877762288676F300A3E098 /* TabbarController.swift */,
+
 				6EEA108A288333A000026F09 /* TestViewController.swift */,
 			);
 			path = ViewController;
@@ -257,6 +262,7 @@
 				80AC9F9C287A1D06006BC246 /* ListPlantsViewController.swift in Sources */,
 				80AC9F9C287A1D06006BC246 /* ListPlantsViewController.swift in Sources */,
 				6EA7F9082881C84700EA6186 /* ButtonsCell.swift in Sources */,
+				CE877763288676F300A3E098 /* TabbarController.swift in Sources */,
 				18A906D228758C150043E67D /* FirstScreenViewController.swift in Sources */,
 				6EA7F9032881C82700EA6186 /* MainCell.swift in Sources */,
 				18FE062D2885E8B900998E37 /* ProfileCollectionViewCell.swift in Sources */,
