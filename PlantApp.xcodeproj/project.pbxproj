@@ -35,6 +35,7 @@
 		80AC9F9A2878B2DE006BC246 /* SpeciesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80AC9F992878B2DE006BC246 /* SpeciesTableViewCell.swift */; };
 		80AC9F9C287A1D06006BC246 /* ListPlantsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80AC9F9B287A1D06006BC246 /* ListPlantsViewController.swift */; };
 		80AC9FA22880BA91006BC246 /* ListPlantsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80AC9FA12880BA91006BC246 /* ListPlantsTableViewCell.swift */; };
+		80AC9FF22886F89C006BC246 /* Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80AC9FF12886F89C006BC246 /* Test.swift */; };
 		CE877763288676F300A3E098 /* TabbarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE877762288676F300A3E098 /* TabbarController.swift */; };
 /* End PBXBuildFile section */
 
@@ -69,6 +70,7 @@
 		80AC9F992878B2DE006BC246 /* SpeciesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeciesTableViewCell.swift; sourceTree = "<group>"; };
 		80AC9F9B287A1D06006BC246 /* ListPlantsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListPlantsViewController.swift; sourceTree = "<group>"; };
 		80AC9FA12880BA91006BC246 /* ListPlantsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListPlantsTableViewCell.swift; sourceTree = "<group>"; };
+		80AC9FF12886F89C006BC246 /* Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Test.swift; sourceTree = "<group>"; };
 		CE877762288676F300A3E098 /* TabbarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -105,6 +107,7 @@
 			isa = PBXGroup;
 			children = (
 				2CDF1DAA2874960900F0BC12 /* AppDelegate.swift */,
+				80AC9FF02886F88B006BC246 /* Test */,
 				6EEA10872883246E00026F09 /* Sources */,
 				6EEA1086288323E000026F09 /* Views */,
 				6EEA10852883238700026F09 /* ViewController */,
@@ -135,9 +138,7 @@
 				6EA7F9052881C83500EA6186 /* LoginPageViewController2.swift */,
 				80AC9F9728788FD8006BC246 /* SpeciesViewController.swift */,
 				80AC9F9B287A1D06006BC246 /* ListPlantsViewController.swift */,
-
 				CE877762288676F300A3E098 /* TabbarController.swift */,
-
 				6EEA108A288333A000026F09 /* TestViewController.swift */,
 			);
 			path = ViewController;
@@ -170,6 +171,14 @@
 				2CDF1DB32874960B00F0BC12 /* Assets.xcassets */,
 			);
 			path = Sources;
+			sourceTree = "<group>";
+		};
+		80AC9FF02886F88B006BC246 /* Test */ = {
+			isa = PBXGroup;
+			children = (
+				80AC9FF12886F89C006BC246 /* Test.swift */,
+			);
+			path = Test;
 			sourceTree = "<group>";
 		};
 		E9919BEB6BC1CD1491EFFB4D /* Frameworks */ = {
@@ -272,6 +281,7 @@
 				6EA7F9062881C83500EA6186 /* LoginPageViewController2.swift in Sources */,
 				80AC9FA22880BA91006BC246 /* ListPlantsTableViewCell.swift in Sources */,
 				18FE06292885E8A300998E37 /* ProfileViewController.swift in Sources */,
+				80AC9FF22886F89C006BC246 /* Test.swift in Sources */,
 				6EEA108928832DDD00026F09 /* CustomTextField.swift in Sources */,
 				18FE062E2885E8B900998E37 /* ProfilePhotoCell.swift in Sources */,
 				80AC9F9628774687006BC246 /* ContentButton.swift in Sources */,
