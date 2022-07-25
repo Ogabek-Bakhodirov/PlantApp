@@ -18,24 +18,6 @@ class ListPlantsViewController: UIViewController{
         return view
     }()
     
-    lazy var speciesBackButton: UIButton = {
-        var view = UIButton()
-        view.translatesAutoresizingMaskIntoConstraints = false
-        view.setImage(UIImage(systemName: "chevron.backward"), for: .normal)
-        view.tintColor = .white
-        view.addTarget(self, action: #selector(backButtonTapped), for: .touchUpInside)
-        
-        return view
-    }()
-    
-    lazy var speciesMenuButton: UIButton = {
-        let view = UIButton()
-        view.translatesAutoresizingMaskIntoConstraints = false
-        view.setImage(Images.kebab_menu_img.image, for: .normal)
-        
-        return view
-    }()
-    
     lazy var speciesTitle: UILabel = {
         let view = UILabel()
         view.translatesAutoresizingMaskIntoConstraints = false
@@ -81,8 +63,6 @@ class ListPlantsViewController: UIViewController{
     
     func setupSubviews(){
         view.addSubview(backgroundTopImage)
-        view.addSubview(speciesBackButton)
-        view.addSubview(speciesMenuButton)
         view.addSubview(speciesTitle)
         view.addSubview(speciesTableView)
         view.addSubview(searchBar)
@@ -91,20 +71,10 @@ class ListPlantsViewController: UIViewController{
             backgroundTopImage.topAnchor.constraint(equalTo: view.topAnchor),
             backgroundTopImage.leftAnchor.constraint(equalTo: view.leftAnchor),
             backgroundTopImage.rightAnchor.constraint(equalTo: view.rightAnchor),
-            
-            speciesBackButton.topAnchor.constraint(equalTo: backgroundTopImage.topAnchor, constant: 50),
-            speciesBackButton.leftAnchor.constraint(equalTo: backgroundTopImage.leftAnchor, constant: 20),
-            speciesBackButton.heightAnchor.constraint(equalToConstant: 24),
-            speciesBackButton.widthAnchor.constraint(equalToConstant: 24),
-            
-            speciesMenuButton.topAnchor.constraint(equalTo: backgroundTopImage.topAnchor, constant: 50),
-            speciesMenuButton.rightAnchor.constraint(equalTo: backgroundTopImage.rightAnchor, constant: -20),
-            speciesMenuButton.heightAnchor.constraint(equalToConstant: 24),
-            speciesMenuButton.widthAnchor.constraint(equalToConstant: 24),
-            
+         
             speciesTitle.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
             speciesTitle.leftAnchor.constraint(equalTo: backgroundTopImage.leftAnchor, constant: 20),
-            speciesTitle.bottomAnchor.constraint(equalTo: backgroundTopImage.bottomAnchor, constant: 25),
+            speciesTitle.bottomAnchor.constraint(equalTo: backgroundTopImage.bottomAnchor, constant: -10),
             
             searchBar.topAnchor.constraint(equalTo: backgroundTopImage.bottomAnchor, constant: -33),
             searchBar.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 23),
@@ -117,10 +87,6 @@ class ListPlantsViewController: UIViewController{
             speciesTableView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -30), 
         ])
     }
-    
-    @objc func backButtonTapped(){
-        dismiss(animated: true)
-    }
 }
 
 extension ListPlantsViewController: UITableViewDelegate, UITableViewDataSource{
@@ -130,7 +96,6 @@ extension ListPlantsViewController: UITableViewDelegate, UITableViewDataSource{
         let articlesTableViewController = ArticlesTableViewController()
         articlesTableViewController.modalTransitionStyle = .crossDissolve
         articlesTableViewController.modalPresentationStyle = .fullScreen
-//        present(articlesTableViewController, animated: true)
         navigationController?.pushViewController(articlesTableViewController, animated: true)
         
     }
@@ -150,5 +115,4 @@ extension ListPlantsViewController: UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         plants.count
     }
-    
 }
