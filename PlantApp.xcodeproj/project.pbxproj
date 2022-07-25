@@ -130,15 +130,15 @@
 		6EEA10852883238700026F09 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				18FE06282885E8A300998E37 /* ProfileViewController.swift */,
-				185B52C32882439F00F0ABF6 /* DetailArticles.swift */,
-				6EA7F8F92881C7FF00EA6186 /* MainViewController.swift */,
 				2C1A86E128749AF4009600F9 /* OnboardingViewController.swift */,
-				18A906D128758C150043E67D /* FirstScreenViewController.swift */,
 				6EA7F9052881C83500EA6186 /* LoginPageViewController2.swift */,
+				CE877762288676F300A3E098 /* TabbarController.swift */,
+				6EA7F8F92881C7FF00EA6186 /* MainViewController.swift */,
+				18A906D128758C150043E67D /* FirstScreenViewController.swift */,
 				80AC9F9728788FD8006BC246 /* SpeciesViewController.swift */,
 				80AC9F9B287A1D06006BC246 /* ListPlantsViewController.swift */,
-				CE877762288676F300A3E098 /* TabbarController.swift */,
+				185B52C32882439F00F0ABF6 /* DetailArticles.swift */,
+				18FE06282885E8A300998E37 /* ProfileViewController.swift */,
 				6EEA108A288333A000026F09 /* TestViewController.swift */,
 			);
 			path = ViewController;
