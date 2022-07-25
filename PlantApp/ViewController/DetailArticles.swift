@@ -18,29 +18,24 @@ class DetailArticles: UIViewController{
         
         return view
     }()
-    
-    lazy var backButton: UIButton = {
-        var view = UIButton()
-        view.translatesAutoresizingMaskIntoConstraints = false
-        view.setImage(UIImage(systemName: "chevron.backward"), for: .normal)
-        view.contentMode = .scaleToFill
-        view.addTarget(self, action: #selector(backTapped), for: .touchUpInside)
-//        view.frame.size = CGSize(width: 40.0, height: 40.0)
-        view.tintColor = .white
-        
-        return view
-    }()
-    
+
     lazy var heartButton: UIButton = {
         var view = UIButton()
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.setImage(UIImage(systemName: "heart.fill"), for: .normal)
-        view.contentMode = .scaleAspectFill
-        view.layer.cornerRadius = 31.0
-        view.clipsToBounds = true
-        view.backgroundColor = .red
-        view.addTarget(self, action: #selector(heartTapped), for: .touchUpInside)
+        view.setImage(Images.heart_img.image, for: .normal)
         view.tintColor = .white
+//        view.addTarget(self, action: #selector(heartButtonTapped(on:)), for: .touchUpInside)        
+        return view
+    }()
+
+    
+    lazy var heartView: UIView = {
+       let view = UIView()
+        view.translatesAutoresizingMaskIntoConstraints = false
+        view.backgroundColor = #colorLiteral(red: 1, green: 0.3843137255, blue: 0.3843137255, alpha: 1)
+        view.layer.cornerRadius = 30
+        view.layer.shadowOpacity = 0.3
+        view.layer.shadowRadius = 5
         
         return view
     }()
@@ -51,8 +46,10 @@ class DetailArticles: UIViewController{
         view.text = "VEGETABLES"
         view.textAlignment = .center
         view.backgroundColor = UIColor(named: "vegetables_bg")
-        view.font = .monospacedSystemFont(ofSize: 12, weight: .bold)
+        view.font = .systemFont(ofSize: 12, weight: .bold)
         view.textColor = UIColor(named: "vegetables_color")
+        view.layer.cornerRadius = 5
+        view.clipsToBounds = true
 
         return view
     }()
@@ -63,8 +60,10 @@ class DetailArticles: UIViewController{
         view.text = "GARDEN"
         view.backgroundColor = UIColor(named: "vegetables_bg")
         view.textAlignment = .center
-        view.font = .monospacedSystemFont(ofSize: 12, weight: .bold)
+        view.font = .systemFont(ofSize: 12, weight: .bold)
         view.textColor = UIColor(named: "vegetables_color")
+        view.layer.cornerRadius = 5
+        view.clipsToBounds = true
 
         return view
     }()
@@ -115,7 +114,7 @@ class DetailArticles: UIViewController{
         return UICollectionViewCompositionalLayout { sectionIndex, _ in
             let item = NSCollectionLayoutItem(layoutSize: .init(widthDimension: .fractionalWidth(1), heightDimension: .fractionalHeight(1)))
             let group = NSCollectionLayoutGroup.horizontal(layoutSize: .init(widthDimension: .fractionalWidth(1), heightDimension: .fractionalHeight(1)), subitem: item, count: 1)
-//            group.contentInsets = .init(top: 3.0, leading: 3.0, bottom: 3.0, trailing: 3.0)
+
             return NSCollectionLayoutSection(group: group)
         }
     }
@@ -123,34 +122,29 @@ class DetailArticles: UIViewController{
     func setSubviews(){
         
         view.addSubview(image)
-        view.addSubview(backButton)
+        view.addSubview(heartView)
         view.addSubview(heartButton)
         view.addSubview(labelStack)
-//        view.addSubview(uiView)
         view.addSubview(detailArticlesCollectionView)
         
         NSLayoutConstraint.activate([
-            
-            backButton.topAnchor.constraint(equalTo: view.topAnchor, constant: 50.0),
-            backButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 23.0),
-            backButton.heightAnchor.constraint(equalToConstant: 50.0),
-            backButton.widthAnchor.constraint(equalToConstant: 50.0),
-            
-            heartButton.topAnchor.constraint(equalTo: view.topAnchor, constant: 250.0),
-            heartButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -23.0),
-            heartButton.heightAnchor.constraint(equalToConstant: 60.0),
-            heartButton.widthAnchor.constraint(equalToConstant: 60.0),
+
+            heartView.topAnchor.constraint(equalTo: image.bottomAnchor, constant: -30),
+            heartView.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -22),
+            heartView.heightAnchor.constraint(equalToConstant: 60),
+            heartView.widthAnchor.constraint(equalTo: heartView.heightAnchor),
+
+            heartButton.centerXAnchor.constraint(equalTo: heartView.centerXAnchor),
+            heartButton.centerYAnchor.constraint(equalTo: heartView.centerYAnchor),    
+            heartButton.heightAnchor.constraint(equalToConstant: 40),
+            heartButton.widthAnchor.constraint(equalTo: heartButton.heightAnchor),
+
             
             labelStack.topAnchor.constraint(equalTo: image.bottomAnchor, constant: 25.0),
             labelStack.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 23.0),
             labelStack.heightAnchor.constraint(equalToConstant: 20.0),
             labelStack.widthAnchor.constraint(equalToConstant: 200.0),
-            
-//            uiView.topAnchor.constraint(equalTo: view.topAnchor, constant: 260.0),
-//            uiView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -30.0),
-//            uiView.heightAnchor.constraint(equalToConstant: 65.0),
-//            uiView.widthAnchor.constraint(equalToConstant: 65.0),
-//
+   
             image.topAnchor.constraint(equalTo: view.topAnchor),
             image.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             image.trailingAnchor.constraint(equalTo: view.trailingAnchor),
@@ -166,6 +160,12 @@ class DetailArticles: UIViewController{
 
 extension DetailArticles: UICollectionViewDelegate, UICollectionViewDataSource{
     
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let profileViewController = ProfileViewController()
+        profileViewController.modalTransitionStyle = .crossDissolve
+        profileViewController.modalPresentationStyle = .fullScreen
+        navigationController?.pushViewController(profileViewController, animated: true)
+    }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 1

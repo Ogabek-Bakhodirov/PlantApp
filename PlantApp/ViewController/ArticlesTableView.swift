@@ -50,7 +50,6 @@ extension ArticlesTableViewController: UITableViewDelegate, UITableViewDataSourc
         
         if indexPath.row == 0 {
             guard let cell = tableView.dequeueReusableCell(withIdentifier: ArticlesTopTableViewCell.cellName, for: indexPath) as? ArticlesTopTableViewCell else { return UITableViewCell() }
-            
             return cell
         } else if indexPath.row == 1{
             guard let cell = tableView.dequeueReusableCell(withIdentifier: ArticlesRatingTableViewCell.cellName, for: indexPath) as? ArticlesRatingTableViewCell else { return UITableViewCell() }
@@ -63,6 +62,10 @@ extension ArticlesTableViewController: UITableViewDelegate, UITableViewDataSourc
         } else {
             return UITableViewCell()
         }
+    }
+    
+    @objc func heartButtonTapped(on button: UIButton){
+        print("hello")
     }
 }
 

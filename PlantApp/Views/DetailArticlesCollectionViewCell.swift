@@ -48,8 +48,8 @@ class DetailArticlesCollectionViewCell: UICollectionViewCell{
         let view = UILabel()
         view.translatesAutoresizingMaskIntoConstraints = false
         view.numberOfLines = 0
-        view.text = "2019 . 01 . 01"
-        view.font = .monospacedSystemFont(ofSize: 12, weight: .medium)
+        view.text = "2019 .01 .01"
+        view.font = .systemFont(ofSize: 13)
         view.textColor = .gray
 
         return view
@@ -75,7 +75,7 @@ class DetailArticlesCollectionViewCell: UICollectionViewCell{
         view.clipsToBounds = true
         view.backgroundColor = UIColor(named: "ic_color")
         view.tintColor = .white
-//        view.addTarget(self, action: #selector(followTapped), for: .touchUpInside)
+        view.addTarget(self, action: #selector(followTapped), for: .touchUpInside)
         
         return view
     }()
@@ -95,18 +95,28 @@ class DetailArticlesCollectionViewCell: UICollectionViewCell{
         view.translatesAutoresizingMaskIntoConstraints = false
         view.numberOfLines = 0
         view.text = """
-Public parks aside, getting a dose of nature can
-be a tricky task during an urban escape. But nat
-ure should and can fit into that city getaway, acc
-ording to Kally Ellis, the founder of the London fl
-orist company McQueens and the in-house florist
-for the Maybourne Hotel Group. “Connecting with
-the natural world wherever you are is a great antid
-ote to jet lag and travel tiredness,” she said. “Plan
-ts and flowers can refresh us, boost our energy
-and help us recalibrate.”
-"""
-        view.font = .monospacedSystemFont(ofSize: 13, weight: .regular)
+        Public parks aside, getting a dose of nature can
+        be a tricky task during an urban escape. But nat
+        ure should and can fit into that city getaway, acc
+        ording to Kally Ellis, the founder of the London fl
+        orist company McQueens and the in-house florist
+        for the Maybourne Hotel Group. “Connecting with
+        the natural world wherever you are is a great antid
+        ote to jet lag and travel tiredness,” she said. “Plan
+        ts and flowers can refresh us, boost our energy
+        and help us recalibrate.”Public parks aside, getting a dose of nature can
+        be a tricky task during an urban escape. But nat
+        ure should and can fit into that city getaway, acc
+        ording to Kally Ellis, the founder of the London fl
+        orist company McQueens and the in-house florist
+        for the Maybourne Hotel Group. “Connecting with
+        the natural world wherever you are is a great antid
+        ote to jet lag and travel tiredness,” she said. “Plan
+        ts and flowers can refresh us, boost our energy
+        and help us recalibrate.”
+        """
+        view.font = .systemFont(ofSize: 15)
+        view.contentMode = .top
         view.textColor = .gray
 
         return view
@@ -120,7 +130,7 @@ and help us recalibrate.”
         self.addSubview(descriptionLabel)
         
         NSLayoutConstraint.activate([
-            titleLabel.topAnchor.constraint(equalTo: self.topAnchor),
+            titleLabel.topAnchor.constraint(equalTo: self.topAnchor, constant: 10),
             titleLabel.trailingAnchor.constraint(equalTo: self.trailingAnchor),
             titleLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor),
             titleLabel.heightAnchor.constraint(equalToConstant: 80.0),
@@ -145,5 +155,8 @@ and help us recalibrate.”
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    @objc func followTapped(){
     }
 }

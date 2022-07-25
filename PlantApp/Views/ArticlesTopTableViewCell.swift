@@ -20,36 +20,12 @@ class ArticlesTopTableViewCell: UITableViewCell{
         return view
     }()
     
-    lazy var speciesBackButton: UIButton = {
-        var view = UIButton()
-        view.translatesAutoresizingMaskIntoConstraints = false
-        view.setImage(UIImage(systemName: "chevron.backward"), for: .normal)
-        view.tintColor = .white
-//        view.addTarget(self, action: #selector(backButtonTapped), for: .touchUpInside)
-        view.layer.shadowColor = UIColor.black.cgColor
-        view.layer.shadowRadius = 8
-        view.layer.shadowOpacity = 0.5
-        
-        return view
-    }()
-    
-    lazy var speciesMenuButton: UIButton = {
-        let view = UIButton()
-        view.translatesAutoresizingMaskIntoConstraints = false
-        view.setImage(Images.kebab_menu_img.image, for: .normal)
-        view.layer.shadowColor = UIColor.black.cgColor
-        view.layer.shadowRadius = 8
-        view.layer.shadowOpacity = 0.5
-        
-        return view
-    }()
-    
     lazy var heartButton: UIButton = {
         var view = UIButton()
         view.translatesAutoresizingMaskIntoConstraints = false
         view.setImage(Images.heart_img.image, for: .normal)
         view.tintColor = .white
-//        view.addTarget(self, action: #selector(backButtonTapped), for: .touchUpInside)        
+//        view.addTarget(self, action: #selector(heartButtonTapped(on:)), for: .touchUpInside)        
         return view
     }()
 
@@ -75,7 +51,6 @@ class ArticlesTopTableViewCell: UITableViewCell{
         view.textAlignment = .center
         view.layer.cornerRadius = 5
         view.clipsToBounds = true
-
         
         return view
     }()
@@ -119,8 +94,6 @@ class ArticlesTopTableViewCell: UITableViewCell{
     
     func setupSubviews(){
         addSubview(backgroundTopImage)
-        addSubview(speciesBackButton)
-        addSubview(speciesMenuButton)
         addSubview(heartView)
         addSubview(heartButton)
         addSubview(dangerStackView)
@@ -130,17 +103,7 @@ class ArticlesTopTableViewCell: UITableViewCell{
             backgroundTopImage.leftAnchor.constraint(equalTo: leftAnchor),
             backgroundTopImage.rightAnchor.constraint(equalTo: rightAnchor),
             backgroundTopImage.heightAnchor.constraint(equalToConstant: 280),
-            
-            speciesBackButton.topAnchor.constraint(equalTo: backgroundTopImage.topAnchor, constant: 40),
-            speciesBackButton.leftAnchor.constraint(equalTo: backgroundTopImage.leftAnchor, constant: 20),
-            speciesBackButton.heightAnchor.constraint(equalToConstant: 24),
-            speciesBackButton.widthAnchor.constraint(equalToConstant: 24),
-            
-            speciesMenuButton.topAnchor.constraint(equalTo: backgroundTopImage.topAnchor, constant: 40),
-            speciesMenuButton.rightAnchor.constraint(equalTo: backgroundTopImage.rightAnchor, constant: -20),
-            speciesMenuButton.heightAnchor.constraint(equalToConstant: 24),
-            speciesMenuButton.widthAnchor.constraint(equalToConstant: 24),
-            
+
             heartView.topAnchor.constraint(equalTo: backgroundTopImage.bottomAnchor, constant: -25),
             heartView.rightAnchor.constraint(equalTo: rightAnchor, constant: -22),
             heartView.heightAnchor.constraint(equalToConstant: 60),

@@ -159,6 +159,10 @@ extension MainViewController: UICollectionViewDelegate , UICollectionViewDataSou
                 navigationController?.pushViewController(vc, animated: true)
                 break
             case 2:
+                let vc = DetailArticles()
+                vc.modalTransitionStyle = .crossDissolve
+                vc.modalPresentationStyle = .fullScreen
+                navigationController?.pushViewController(vc, animated: true)
                 break
             default:
                 break
