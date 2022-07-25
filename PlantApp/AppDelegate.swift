@@ -16,7 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.makeKeyAndVisible()
 
         if UserDefaults.standard.bool(forKey: "IS_USER_LOGIN") {
-            let navigationController = UINavigationController(rootViewController: MainViewController())
+            let navigationController = UINavigationController(rootViewController: TabbarController())
             window?.rootViewController = navigationController
         } else {
             let navigationController = UINavigationController(rootViewController: OnboardingViewController())
