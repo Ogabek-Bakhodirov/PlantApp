@@ -6,3 +6,9 @@
 //
 
 import UIKit
+
+class ArticlesDescriptionTableViewCell: UITableViewCell{
+    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
+        super.init(style: style, reuseIdentifier: reuseidentifier)
+    }
+}
