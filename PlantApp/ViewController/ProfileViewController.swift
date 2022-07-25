@@ -120,15 +120,15 @@ class ProfileViewController: UIViewController, UICollectionViewDataSource, UICol
         return view
     }()
     
-    lazy var backButton: UIButton = {
-        let view = UIButton()
-        view.translatesAutoresizingMaskIntoConstraints = false
-        view.contentMode = .topLeft
-        view.setImage(UIImage(systemName: "chevron.backward"), for: .normal)
-        view.tintColor = .white
-        
-        return view
-    }()
+//    lazy var backButton: UIButton = {
+//        let view = UIButton()
+//        view.translatesAutoresizingMaskIntoConstraints = false
+//        view.contentMode = .topLeft
+//        view.setImage(UIImage(systemName: "chevron.backward"), for: .normal)
+//        view.tintColor = .white
+//        
+//        return view
+//    }()
     
     lazy var avatarImageView: UIImageView = {
         let view = UIImageView()
@@ -140,15 +140,15 @@ class ProfileViewController: UIViewController, UICollectionViewDataSource, UICol
         
         return view
     }()
-    
-    lazy var edtIconButton: UIButton = {
-        let view = UIButton()
-        view.translatesAutoresizingMaskIntoConstraints = false
-        view.setImage(UIImage(named: "kebab_menu_img"), for: .normal)
-        view.tintColor = .white
-        
-        return view
-    }()
+//    
+//    lazy var edtIconButton: UIButton = {
+//        let view = UIButton()
+//        view.translatesAutoresizingMaskIntoConstraints = false
+//        view.setImage(UIImage(named: "kebab_menu_img"), for: .normal)
+//        view.tintColor = .white
+//        
+//        return view
+//    }()
     
     lazy var nameLabel: UILabel = {
         let view = UILabel()
@@ -211,9 +211,9 @@ class ProfileViewController: UIViewController, UICollectionViewDataSource, UICol
         
         view.addSubview(backGroundImage)
         view.addSubview(stackView2)
-        view.addSubview(backButton)
+//        view.addSubview(backButton)
         view.addSubview(avatarImageView)
-        view.addSubview(edtIconButton)
+//        view.addSubview(edtIconButton)
         view.addSubview(profileCollectionView)
         
         NSLayoutConstraint.activate([
@@ -223,19 +223,19 @@ class ProfileViewController: UIViewController, UICollectionViewDataSource, UICol
             backGroundImage.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             backGroundImage.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.31),
             
-            backButton.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 5.0),
-            backButton.leftAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leftAnchor, constant: 10.0),
-            backButton.heightAnchor.constraint(equalToConstant: 30),
-            backButton.widthAnchor.constraint(equalToConstant: 30),
-            
-            edtIconButton.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 5.0),
-            edtIconButton.rightAnchor.constraint(equalTo: view.safeAreaLayoutGuide.rightAnchor, constant: -10.0),
-            edtIconButton.heightAnchor.constraint(equalToConstant: 30),
-            edtIconButton.widthAnchor.constraint(equalToConstant: 30),
+//            backButton.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 5.0),
+//            backButton.leftAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leftAnchor, constant: 10.0),
+//            backButton.heightAnchor.constraint(equalToConstant: 30),
+//            backButton.widthAnchor.constraint(equalToConstant: 30),
+//            
+//            edtIconButton.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 5.0),
+//            edtIconButton.rightAnchor.constraint(equalTo: view.safeAreaLayoutGuide.rightAnchor, constant: -10.0),
+//            edtIconButton.heightAnchor.constraint(equalToConstant: 30),
+//            edtIconButton.widthAnchor.constraint(equalToConstant: 30),
             
             avatarImageView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 15.0),
-            avatarImageView.rightAnchor.constraint(equalTo: edtIconButton.leftAnchor, constant: -100.0),
-            avatarImageView.leftAnchor.constraint(equalTo: backButton.rightAnchor, constant: 100.0),
+            avatarImageView.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -150.0),
+            avatarImageView.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 150.0),
             avatarImageView.heightAnchor.constraint(equalTo: avatarImageView.widthAnchor),
             
             stackView2.topAnchor.constraint(equalTo: avatarImageView.bottomAnchor),

@@ -157,12 +157,15 @@ extension MainViewController: UICollectionViewDelegate , UICollectionViewDataSou
                 vc.modalTransitionStyle = .crossDissolve
                 vc.modalPresentationStyle = .fullScreen
                 navigationController?.pushViewController(vc, animated: true)
+                navigationController?.navigationBar.tintColor = .black
+
                 break
             case 2:
                 let vc = DetailArticles()
                 vc.modalTransitionStyle = .crossDissolve
                 vc.modalPresentationStyle = .fullScreen
                 navigationController?.pushViewController(vc, animated: true)
+                navigationController?.navigationBar.tintColor = .black
                 break
             default:
                 break
