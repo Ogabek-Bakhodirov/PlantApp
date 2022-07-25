@@ -130,7 +130,8 @@ extension ListPlantsViewController: UITableViewDelegate, UITableViewDataSource{
         let articlesTableViewController = ArticlesTableViewController()
         articlesTableViewController.modalTransitionStyle = .crossDissolve
         articlesTableViewController.modalPresentationStyle = .fullScreen
-        present(articlesTableViewController, animated: true)
+//        present(articlesTableViewController, animated: true)
+        navigationController?.pushViewController(articlesTableViewController, animated: true)
         
     }
     

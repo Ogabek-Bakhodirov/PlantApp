@@ -154,9 +154,10 @@ extension MainViewController: UICollectionViewDelegate , UICollectionViewDataSou
             case 1:
                 let vc = SpeciesViewController()
                 vc.loader = SpeciesLoader()
-                vc.modalTransitionStyle = .flipHorizontal
+                vc.modalTransitionStyle = .crossDissolve
                 vc.modalPresentationStyle = .fullScreen
-                present(vc, animated: true)
+//                present(vc, animated: true)
+                navigationController?.pushViewController(vc, animated: true)
                 break
             case 2:
                 break

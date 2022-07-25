@@ -118,6 +118,7 @@
 				80AC9FF02886F88B006BC246 /* Test */,
 				6EEA10872883246E00026F09 /* Sources */,
 				6EEA1086288323E000026F09 /* Views */,
+				80121DC8288EE09600B98DBC /* Tapbar */,
 				6EEA10852883238700026F09 /* ViewController */,
 				6EEA10842883237D00026F09 /* Utils */,
 				80AC9F6B28757284006BC246 /* Constants.swift */,
@@ -140,7 +141,6 @@
 			children = (
 				2C1A86E128749AF4009600F9 /* OnboardingViewController.swift */,
 				6EA7F9052881C83500EA6186 /* LoginPageViewController2.swift */,
-				CE877762288676F300A3E098 /* TabbarController.swift */,
 				6EA7F8F92881C7FF00EA6186 /* MainViewController.swift */,
 				18A906D128758C150043E67D /* FirstScreenViewController.swift */,
 				80AC9F9728788FD8006BC246 /* SpeciesViewController.swift */,
@@ -183,6 +183,14 @@
 				2CDF1DB32874960B00F0BC12 /* Assets.xcassets */,
 			);
 			path = Sources;
+			sourceTree = "<group>";
+		};
+		80121DC8288EE09600B98DBC /* Tapbar */ = {
+			isa = PBXGroup;
+			children = (
+				CE877762288676F300A3E098 /* TabbarController.swift */,
+			);
+			path = Tapbar;
 			sourceTree = "<group>";
 		};
 		80AC9FF02886F88B006BC246 /* Test */ = {

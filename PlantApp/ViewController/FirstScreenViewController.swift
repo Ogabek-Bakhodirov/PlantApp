@@ -268,7 +268,7 @@ class FirstScreenViewController: UINavigationController{
         let viewController = UIViewController()
         viewController.modalTransitionStyle = .flipHorizontal
         viewController.modalPresentationStyle = .fullScreen
-        
-        present(viewController, animated: true)
+        navigationController?.pushViewController(viewController, animated: true)
+//        present(viewController, animated: true)
     }
 }
