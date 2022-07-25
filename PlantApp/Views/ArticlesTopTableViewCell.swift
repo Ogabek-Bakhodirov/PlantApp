@@ -14,7 +14,8 @@ class ArticlesTopTableViewCell: UITableViewCell{
     lazy var backgroundTopImage: UIImageView = {
         let view = UIImageView()
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.image = Images.circleCactusBg
+        view.image = Images.circleCactus.image
+        view.contentMode = .scaleAspectFill
         
         return view
     }()
@@ -35,7 +36,7 @@ class ArticlesTopTableViewCell: UITableViewCell{
     lazy var speciesMenuButton: UIButton = {
         let view = UIButton()
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.setImage(Images.kebab_menu_img, for: .normal)
+        view.setImage(Images.kebab_menu_img.image, for: .normal)
         view.layer.shadowColor = UIColor.black.cgColor
         view.layer.shadowRadius = 8
         view.layer.shadowOpacity = 0.5
@@ -46,7 +47,7 @@ class ArticlesTopTableViewCell: UITableViewCell{
     lazy var heartButton: UIButton = {
         var view = UIButton()
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.setImage(Images.heart, for: .normal)
+        view.setImage(Images.heart_img.image, for: .normal)
         view.tintColor = .white
 //        view.addTarget(self, action: #selector(backButtonTapped), for: .touchUpInside)        
         return view

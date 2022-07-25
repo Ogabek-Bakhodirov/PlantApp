@@ -28,7 +28,8 @@ enum Images {
     case fatCactus
     case circleCactus
     case ic_check_green
-
+    case heart_img
+    
     var image: UIImage? {
         switch self {
         case .identifyPageImage: return  UIImage(named: "ic_onboarding_identify")
@@ -51,6 +52,7 @@ enum Images {
         case .fatCactus: return UIImage(named: "fat_cactus_img")
         case .circleCactus: return UIImage(named: "circle_cactus_img")
         case .ic_check_green: return UIImage(named: "ic_check_green")
+        case .heart_img: return UIImage(named: "heart_img")
         }
     }
 }

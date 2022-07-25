@@ -145,8 +145,8 @@
 				18A906D128758C150043E67D /* FirstScreenViewController.swift */,
 				80AC9F9728788FD8006BC246 /* SpeciesViewController.swift */,
 				80AC9F9B287A1D06006BC246 /* ListPlantsViewController.swift */,
-				185B52C32882439F00F0ABF6 /* DetailArticles.swift */,
 				80121DC6288EAD9D00B98DBC /* ArticlesTableView.swift */,
+				185B52C32882439F00F0ABF6 /* DetailArticles.swift */,
 				18FE06282885E8A300998E37 /* ProfileViewController.swift */,
 				6EEA108A288333A000026F09 /* TestViewController.swift */,
 			);
