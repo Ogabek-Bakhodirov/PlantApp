@@ -1,3 +1,3 @@
 # PlantApp
 
-This App helps to choose and find out your favourite plant.
+By using this app you can find out your favourite plant and additional information about this plant.
